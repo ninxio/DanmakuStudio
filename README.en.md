@@ -34,9 +34,11 @@ Materials, comment editing and service connections. The application UI is curren
 
 Editing preserves the original XML and media. Alignment runs locally without cloud models.
 
+Across multiple tested batches of related media versions, one-shot matching produced XML comment files that were ready to use, with few errors or omissions.
+
 ## How it works
 
-Studio compares the reference and target media to find common sections and build a piecewise time mapping. Audio alignment matches shared sound; AAP compares perceptual frame hashes to find corresponding sequences.
+Studio compares the reference and target media to find common sections and build a piecewise time mapping. Audio alignment matches shared sound; AAP compares perceptual frame hashes to find corresponding sequences (experimental).
 
 Comment timestamps are converted through this mapping, allowing different offsets around introductions, cuts and inserted sections. Repeated shots, unmatched regions and uncertain boundaries need review or manual calibration. See [algorithm details (Chinese)](docs/ALGORITHMS.md).
 
@@ -46,7 +48,6 @@ Comment timestamps are converted through this mapping, allowing different offset
 | --- | --- |
 | XML only | Materials → import XML → edit → export |
 | Reference audio/video, target video and XML | Materials → audio matching → review → export |
-| Similar pictures but different soundtracks | Try experimental AAP → review and calibrate each segment → export |
 
 1. **Prepare:** reference media is the edition the comments originally belong to; target media is the edition you will watch.
 2. **Import:** add files in 素材 (Materials) and associate each XML with the correct reference, especially for multipart uploads.
@@ -114,7 +115,5 @@ This is an early personal project serving a niche need. It currently meets my ow
 ## Use and rights
 
 This project was created for personal learning and interest, and its source is released under an open-source license. It is not affiliated with or officially endorsed by the third-party platforms it interacts with. Use third-party content and services in accordance with applicable laws, platform rules and the permissions required.
-
-If you believe any code, documentation or example in this repository infringes your rights, please contact the maintainer through an [issue](https://github.com/ninxio/DanmakuStudio/issues), identifying the material and the basis of your claim. Reports will be reviewed promptly, and substantiated concerns will be addressed through removal, takedown or other appropriate action. Do not include identity documents, account credentials or other sensitive information in public reports.
 
 Licensed under [GPL-3.0-only](LICENSE). See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for dependency notices.
