@@ -249,6 +249,7 @@ A bundled FFmpeg, FFprobe, libmpv, model weight, plugin, or other optional runti
 | memchr | 2.8.2 | Unlicense OR MIT | [link](https://github.com/BurntSushi/memchr) |
 | memoffset | 0.9.1 | MIT | [link](https://github.com/Gilnaa/memoffset) |
 | mime | 0.3.17 | MIT OR Apache-2.0 | [link](https://github.com/hyperium/mime) |
+| mime_guess | 2.0.5 | MIT | [link](https://github.com/abonander/mime_guess) |
 | miniz_oxide | 0.8.9 | MIT OR Zlib OR Apache-2.0 | [link](https://github.com/Frommi/miniz_oxide/tree/master/miniz_oxide) |
 | mio | 1.2.1 | MIT | [link](https://github.com/tokio-rs/mio) |
 | muda | 0.19.3 | Apache-2.0 OR MIT | [link](https://github.com/tauri-apps/muda) |
@@ -449,7 +450,9 @@ A bundled FFmpeg, FFprobe, libmpv, model weight, plugin, or other optional runti
 | unic-common | 0.9.0 | MIT/Apache-2.0 | [link](https://github.com/open-i18n/rust-unic/) |
 | unic-ucd-ident | 0.9.0 | MIT/Apache-2.0 | [link](https://github.com/open-i18n/rust-unic/) |
 | unic-ucd-version | 0.9.0 | MIT/Apache-2.0 | [link](https://github.com/open-i18n/rust-unic/) |
+| unicase | 2.9.0 | MIT OR Apache-2.0 | [link](https://github.com/seanmonstar/unicase) |
 | unicode-ident | 1.0.24 | (MIT OR Apache-2.0) AND Unicode-3.0 | [link](https://github.com/dtolnay/unicode-ident) |
+| unicode-normalization | 0.1.25 | MIT OR Apache-2.0 | [link](https://github.com/unicode-rs/unicode-normalization) |
 | unicode-segmentation | 1.13.3 | MIT OR Apache-2.0 | [link](https://github.com/unicode-rs/unicode-segmentation) |
 | untrusted | 0.9.0 | ISC | [link](https://github.com/briansmith/untrusted) |
 | url | 2.5.8 | MIT OR Apache-2.0 | [link](https://github.com/servo/rust-url) |

@@ -46,6 +46,10 @@ export async function installLibraryBridge(page: Page) {
       convertFileSrc: (p) => p,
       invoke: async (name, args = {}) => {
         host.__LIBRARY_CALLS__.push(name);
+        if (name === "logvar_status")
+          return { configured: false, serviceUrl: "", hasAdminToken: false };
+        if (name === "get_private_library_status")
+          return { configured: true, baseUrl: "https://example.com", hasReadToken: true };
         if (name === "private_library_catalog") {
           const request = args.request as {
             action: string;

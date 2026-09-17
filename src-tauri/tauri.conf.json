@@ -1,7 +1,7 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
   "productName": "Danmaku Timeline Studio",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "identifier": "studio.danmaku.timeline",
   "build": {
     "beforeDevCommand": "corepack pnpm dev -- --port 1420",

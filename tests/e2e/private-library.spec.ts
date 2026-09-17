@@ -25,6 +25,8 @@ test("private publication follows a validated XML export and keeps a usable smal
   await downloaded;
   await installLibraryBridge(page);
   await page.getByRole("button", { name: "发布到私人弹幕库", exact: true }).click();
+  await page.getByText("已有旧版专用服务", { exact: true }).click();
+  await page.getByRole("button", { name: "打开旧版专用库" }).click();
   const dialog = page.getByRole("dialog", { name: "更新私人弹幕库" });
   await expect(dialog).toBeVisible();
   await dialog.getByLabel("搜索已有影视").fill("测试作品");

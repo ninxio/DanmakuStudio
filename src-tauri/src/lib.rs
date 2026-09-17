@@ -36,6 +36,7 @@ mod project_library;
 mod project_library_commands;
 mod project_files;
 mod private_library;
+mod logvar;
 mod motrix;
 mod source_browser;
 mod storage;
@@ -68,6 +69,13 @@ pub fn run() {
         })
         .invoke_handler({let handler: fn(tauri::ipc::Invoke<tauri::Wry>) -> bool = tauri::generate_handler![
             ping,
+            logvar::logvar_status,
+            logvar::configure_logvar,
+            logvar::clear_logvar,
+            logvar::logvar_player_url,
+            logvar::list_logvar_library,
+            logvar::preview_logvar_upload,
+            logvar::upload_logvar_xml,
             webdav::get_webdav_workspace,
             webdav::save_webdav_connection,
             webdav::remove_webdav_connection,

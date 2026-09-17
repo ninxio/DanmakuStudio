@@ -5,8 +5,8 @@ import {
   getHostEnvironment,
   type HostEnvironment
 } from "../../infrastructure/settings/storageClient";
-import { PrivateLibraryConnectionPanel } from "../export/PrivateLibraryConnectionPanel";
-import { PublicationLibraryDialog } from "../export/PublicationLibraryDialog";
+import { LogVarConnectionPanel } from "../export/LogVarConnectionPanel";
+import { LogVarLibraryDialog } from "../export/LogVarLibraryDialog";
 import { BilibiliAccountPanel } from "../assets/BilibiliAccountPanel";
 import { Button } from "../../components/Button";
 import {
@@ -113,7 +113,9 @@ export function SettingsDialog({ onClose }: SettingsDialogProps) {
   const [tab, setTab] = useState<SettingsTab>("general");
   const [libraryOpen, setLibraryOpen] = useState(false);
   const [settings, setSettings] = useState<AppSettings>(() => loadAppSettings());
-  const [embyPassword, setEmbyPassword] = useState(() => loadVolatileEmbyPassword(settings.emby));
+  const [embyPassword, setEmbyPassword] = useState(() =>
+    loadVolatileEmbyPassword(settings.emby)
+  );
   const settingsInputRef = useRef<HTMLInputElement | null>(null);
   const dirtyRef = useRef(false);
   const [saving, setSaving] = useState(false);
@@ -194,7 +196,10 @@ export function SettingsDialog({ onClose }: SettingsDialogProps) {
 
   const restoreDefaults = () => {
     updateSettings({ ...cloneAppSettings(DEFAULT_APP_SETTINGS), storage: settings.storage });
-    setStatus("已在草稿中恢复默认设置，保存后生效；Emby 连接变化后需重新输入会话密码。", "neutral");
+    setStatus(
+      "已在草稿中恢复默认设置，保存后生效；Emby 连接变化后需重新输入会话密码。",
+      "neutral"
+    );
   };
 
   const clearLocalSettings = async () => {
@@ -220,7 +225,7 @@ export function SettingsDialog({ onClose }: SettingsDialogProps) {
     }
   };
 
-  if (libraryOpen) return <PublicationLibraryDialog onClose={() => setLibraryOpen(false)} />;
+  if (libraryOpen) return <LogVarLibraryDialog onClose={() => setLibraryOpen(false)} />;
   return (
     <Dialog
       ariaLabelledBy="settings-dialog-title"
@@ -275,7 +280,7 @@ export function SettingsDialog({ onClose }: SettingsDialogProps) {
         <fieldset disabled={saving} className="thin-scrollbar min-h-0 overflow-auto p-5">
           {tab === "general" ? <GeneralSettingsPanel /> : null}
           {tab === "privateLibrary" ? (
-            <PrivateLibraryConnectionPanel onOpenLibrary={() => setLibraryOpen(true)} />
+            <LogVarConnectionPanel onOpenLibrary={() => setLibraryOpen(true)} />
           ) : null}
           {tab === "bilibili" ? <BilibiliAccountPanel /> : null}
           {tab === "storage" ? (
