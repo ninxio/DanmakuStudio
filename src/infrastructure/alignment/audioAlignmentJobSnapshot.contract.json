@@ -1,0 +1,15 @@
+{
+  "jobId": "audio-align-contract-1",
+  "status": "queued",
+  "progress": 0.0,
+  "message": "音频对齐任务已加入队列。",
+  "stageKey": "queued",
+  "stageLabel": "排队",
+  "stageIndex": 0,
+  "stageCount": 9,
+  "stageProgress": 0.0,
+  "logs": ["音频对齐任务已加入队列。"],
+  "proposal": null,
+  "error": null,
+  "updatedAtMs": 1700000000000
+}

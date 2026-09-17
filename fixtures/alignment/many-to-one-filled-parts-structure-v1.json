@@ -1,0 +1,65 @@
+{
+  "cohortOrdinal": 1,
+  "parts": [
+    { "partOrdinal": 1, "candidates": [{ "candidateOrdinal": 1, "sourceStartMs": 0, "sourceEndMs": 826650, "spans": [
+      { "spanOrdinal": 1, "kind": "ambiguous", "sourceStartMs": 0, "sourceEndMs": 231475, "targetStartMs": 234575, "targetEndMs": 234575, "anchorCount": 0, "heldOutAnchorCount": 0, "p95ResidualMs": null },
+      { "spanOrdinal": 2, "kind": "matched", "sourceStartMs": 231475, "sourceEndMs": 539725, "targetStartMs": 234575, "targetEndMs": 542825, "anchorCount": 5, "heldOutAnchorCount": 1, "p95ResidualMs": 100 },
+      { "spanOrdinal": 3, "kind": "sourceOnly", "sourceStartMs": 539725, "sourceEndMs": 826650, "targetStartMs": 542825, "targetEndMs": 542825, "anchorCount": 0, "heldOutAnchorCount": 0, "p95ResidualMs": null }
+    ] }] },
+    { "partOrdinal": 2, "candidates": [{ "candidateOrdinal": 1, "sourceStartMs": 0, "sourceEndMs": 899500, "spans": [
+      { "spanOrdinal": 1, "kind": "matched", "sourceStartMs": 25, "sourceEndMs": 539825, "targetStartMs": 537225, "targetEndMs": 1077025, "anchorCount": 9, "heldOutAnchorCount": 2, "p95ResidualMs": 200 },
+      { "spanOrdinal": 2, "kind": "ambiguous", "sourceStartMs": 539825, "sourceEndMs": 899500, "targetStartMs": 1077025, "targetEndMs": 1077025, "anchorCount": 0, "heldOutAnchorCount": 0, "p95ResidualMs": null }
+    ] }] },
+    { "partOrdinal": 3, "candidates": [{ "candidateOrdinal": 1, "sourceStartMs": 0, "sourceEndMs": 859400, "spans": [
+      { "spanOrdinal": 1, "kind": "ambiguous", "sourceStartMs": 0, "sourceEndMs": 94675, "targetStartMs": 1212025, "targetEndMs": 1212025, "anchorCount": 0, "heldOutAnchorCount": 0, "p95ResidualMs": null },
+      { "spanOrdinal": 2, "kind": "matched", "sourceStartMs": 94675, "sourceEndMs": 499225, "targetStartMs": 1212025, "targetEndMs": 1616575, "anchorCount": 7, "heldOutAnchorCount": 2, "p95ResidualMs": 150 },
+      { "spanOrdinal": 3, "kind": "sourceOnly", "sourceStartMs": 499225, "sourceEndMs": 859400, "targetStartMs": 1616575, "targetEndMs": 1616575, "anchorCount": 0, "heldOutAnchorCount": 0, "p95ResidualMs": null }
+    ] }] },
+    { "partOrdinal": 4, "candidates": [{ "candidateOrdinal": 1, "sourceStartMs": 0, "sourceEndMs": 899200, "spans": [
+      { "spanOrdinal": 1, "kind": "matched", "sourceStartMs": 125, "sourceEndMs": 540125, "targetStartMs": 1617525, "targetEndMs": 2157525, "anchorCount": 9, "heldOutAnchorCount": 2, "p95ResidualMs": 100 },
+      { "spanOrdinal": 2, "kind": "ambiguous", "sourceStartMs": 540125, "sourceEndMs": 899200, "targetStartMs": 2157525, "targetEndMs": 2157525, "anchorCount": 0, "heldOutAnchorCount": 0, "p95ResidualMs": null }
+    ] }] },
+    { "partOrdinal": 5, "candidates": [{ "candidateOrdinal": 1, "sourceStartMs": 0, "sourceEndMs": 903700, "spans": [
+      { "spanOrdinal": 1, "kind": "matched", "sourceStartMs": 175, "sourceEndMs": 546725, "targetStartMs": 2153025, "targetEndMs": 2699575, "anchorCount": 9, "heldOutAnchorCount": 2, "p95ResidualMs": 150 },
+      { "spanOrdinal": 2, "kind": "sourceOnly", "sourceStartMs": 546725, "sourceEndMs": 903700, "targetStartMs": 2699575, "targetEndMs": 2699575, "anchorCount": 0, "heldOutAnchorCount": 0, "p95ResidualMs": null }
+    ] }] },
+    { "partOrdinal": 6, "candidates": [{ "candidateOrdinal": 1, "sourceStartMs": 0, "sourceEndMs": 903000, "spans": [
+      { "spanOrdinal": 1, "kind": "matched", "sourceStartMs": 25, "sourceEndMs": 545875, "targetStartMs": 2693725, "targetEndMs": 3239575, "anchorCount": 9, "heldOutAnchorCount": 2, "p95ResidualMs": 200 },
+      { "spanOrdinal": 2, "kind": "ambiguous", "sourceStartMs": 545875, "sourceEndMs": 903000, "targetStartMs": 3239575, "targetEndMs": 3239575, "anchorCount": 0, "heldOutAnchorCount": 0, "p95ResidualMs": null }
+    ] }] },
+    { "partOrdinal": 7, "candidates": [{ "candidateOrdinal": 1, "sourceStartMs": 0, "sourceEndMs": 875900, "spans": [
+      { "spanOrdinal": 1, "kind": "sourceOnly", "sourceStartMs": 0, "sourceEndMs": 134725, "targetStartMs": 3395525, "targetEndMs": 3395525, "anchorCount": 0, "heldOutAnchorCount": 0, "p95ResidualMs": null },
+      { "spanOrdinal": 2, "kind": "matched", "sourceStartMs": 134725, "sourceEndMs": 518825, "targetStartMs": 3395525, "targetEndMs": 3779625, "anchorCount": 5, "heldOutAnchorCount": 1, "p95ResidualMs": 300 },
+      { "spanOrdinal": 3, "kind": "ambiguous", "sourceStartMs": 518825, "sourceEndMs": 875900, "targetStartMs": 3779625, "targetEndMs": 3779625, "anchorCount": 0, "heldOutAnchorCount": 0, "p95ResidualMs": null }
+    ] }] },
+    { "partOrdinal": 8, "candidates": [{ "candidateOrdinal": 1, "sourceStartMs": 0, "sourceEndMs": 890800, "spans": [
+      { "spanOrdinal": 1, "kind": "matched", "sourceStartMs": 175, "sourceEndMs": 533725, "targetStartMs": 3786025, "targetEndMs": 4319575, "anchorCount": 9, "heldOutAnchorCount": 2, "p95ResidualMs": 150 },
+      { "spanOrdinal": 2, "kind": "sourceOnly", "sourceStartMs": 533725, "sourceEndMs": 890800, "targetStartMs": 4319575, "targetEndMs": 4319575, "anchorCount": 0, "heldOutAnchorCount": 0, "p95ResidualMs": null }
+    ] }] },
+    { "partOrdinal": 9, "candidates": [{ "candidateOrdinal": 1, "sourceStartMs": 0, "sourceEndMs": 904100, "spans": [
+      { "spanOrdinal": 1, "kind": "matched", "sourceStartMs": 75, "sourceEndMs": 546975, "targetStartMs": 4312675, "targetEndMs": 4859577, "anchorCount": 9, "heldOutAnchorCount": 2, "p95ResidualMs": 102 },
+      { "spanOrdinal": 2, "kind": "ambiguous", "sourceStartMs": 546975, "sourceEndMs": 904100, "targetStartMs": 4859577, "targetEndMs": 4859577, "anchorCount": 0, "heldOutAnchorCount": 0, "p95ResidualMs": null }
+    ] }] },
+    { "partOrdinal": 10, "candidates": [{ "candidateOrdinal": 1, "sourceStartMs": 0, "sourceEndMs": 899200, "spans": [
+      { "spanOrdinal": 1, "kind": "matched", "sourceStartMs": 275, "sourceEndMs": 540275, "targetStartMs": 4857525, "targetEndMs": 5397525, "anchorCount": 7, "heldOutAnchorCount": 1, "p95ResidualMs": 250 },
+      { "spanOrdinal": 2, "kind": "sourceOnly", "sourceStartMs": 540275, "sourceEndMs": 899200, "targetStartMs": 5397525, "targetEndMs": 5397525, "anchorCount": 0, "heldOutAnchorCount": 0, "p95ResidualMs": null }
+    ] }] },
+    { "partOrdinal": 11, "candidates": [{ "candidateOrdinal": 1, "sourceStartMs": 0, "sourceEndMs": 898700, "spans": [
+      { "spanOrdinal": 1, "kind": "matched", "sourceStartMs": 225, "sourceEndMs": 540225, "targetStartMs": 5398025, "targetEndMs": 5938025, "anchorCount": 9, "heldOutAnchorCount": 2, "p95ResidualMs": 200 },
+      { "spanOrdinal": 2, "kind": "ambiguous", "sourceStartMs": 540225, "sourceEndMs": 898700, "targetStartMs": 5938025, "targetEndMs": 5938025, "anchorCount": 0, "heldOutAnchorCount": 0, "p95ResidualMs": null }
+    ] }] },
+    { "partOrdinal": 12, "candidates": [{ "candidateOrdinal": 1, "sourceStartMs": 0, "sourceEndMs": 821850, "spans": [
+      { "spanOrdinal": 1, "kind": "sourceOnly", "sourceStartMs": 0, "sourceEndMs": 12675, "targetStartMs": 6025575, "targetEndMs": 6025575, "anchorCount": 0, "heldOutAnchorCount": 0, "p95ResidualMs": null },
+      { "spanOrdinal": 2, "kind": "matched", "sourceStartMs": 12675, "sourceEndMs": 465875, "targetStartMs": 6025575, "targetEndMs": 6478795, "anchorCount": 7, "heldOutAnchorCount": 2, "p95ResidualMs": 95 },
+      { "spanOrdinal": 3, "kind": "ambiguous", "sourceStartMs": 465875, "sourceEndMs": 821850, "targetStartMs": 6478795, "targetEndMs": 6478795, "anchorCount": 0, "heldOutAnchorCount": 0, "p95ResidualMs": null }
+    ] }] },
+    { "partOrdinal": 13, "candidates": [{ "candidateOrdinal": 1, "sourceStartMs": 0, "sourceEndMs": 902700, "spans": [
+      { "spanOrdinal": 1, "kind": "matched", "sourceStartMs": 225, "sourceEndMs": 545775, "targetStartMs": 6474025, "targetEndMs": 7036305, "anchorCount": 9, "heldOutAnchorCount": 2, "p95ResidualMs": 12987 },
+      { "spanOrdinal": 2, "kind": "ambiguous", "sourceStartMs": 545775, "sourceEndMs": 902700, "targetStartMs": 7036305, "targetEndMs": 7036305, "anchorCount": 0, "heldOutAnchorCount": 0, "p95ResidualMs": null }
+    ] }] },
+    { "partOrdinal": 14, "candidates": [{ "candidateOrdinal": 1, "sourceStartMs": 0, "sourceEndMs": 400350, "spans": [
+      { "spanOrdinal": 1, "kind": "matched", "sourceStartMs": 225, "sourceEndMs": 399475, "targetStartMs": 7015525, "targetEndMs": 7414775, "anchorCount": 7, "heldOutAnchorCount": 1, "p95ResidualMs": 200 },
+      { "spanOrdinal": 2, "kind": "sourceOnly", "sourceStartMs": 399475, "sourceEndMs": 400350, "targetStartMs": 7414775, "targetEndMs": 7414775, "anchorCount": 0, "heldOutAnchorCount": 0, "p95ResidualMs": null }
+    ] }] }
+  ]
+}

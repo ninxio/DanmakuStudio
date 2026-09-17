@@ -1,0 +1,224 @@
+@layer components {
+  .window-chrome {
+    height: 40px;
+    display: flex;
+    align-items: stretch;
+    flex-shrink: 0;
+    background: rgb(var(--color-surface-canvas));
+  }
+  .window-drag-region {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    min-width: 320px;
+    padding-left: 24px;
+    user-select: none;
+    color: rgb(var(--color-content-muted));
+    font-size: 12px;
+  }
+  .workspace-toolbar {
+    display: flex;
+    height: 60px;
+    align-items: center;
+    gap: 16px;
+    padding: 0 24px;
+    border-bottom: 1px solid rgb(var(--color-boundary-default));
+    background: rgb(var(--color-surface-base));
+  }
+  .project-actions-menu {
+    position: relative;
+    width: clamp(150px, 17vw, 240px);
+    flex-shrink: 0;
+  }
+  .project-actions-menu > summary {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 40px;
+    padding: 0 12px;
+    list-style: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .project-actions-menu > summary:hover,
+  .project-actions-menu[open] > summary {
+    background: rgb(var(--color-surface-soft));
+  }
+  .project-actions-menu > summary::-webkit-details-marker {
+    display: none;
+  }
+  .project-actions-popover {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    z-index: 45;
+    display: grid;
+    gap: 4px;
+    width: 260px;
+    padding: 12px;
+    border: 1px solid rgb(var(--color-boundary-default));
+    border-radius: 16px;
+    background: rgb(var(--color-surface-base));
+    box-shadow: 0 12px 32px rgb(var(--color-scrim) / 0.18);
+  }
+  .project-actions-popover button {
+    justify-content: flex-start;
+    border-color: transparent;
+    border-radius: 8px;
+    background: transparent;
+  }
+  .workflow-step {
+    display: inline-flex;
+    height: 40px;
+    min-width: 92px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 999px;
+    padding: 0 14px;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(var(--color-content-muted));
+  }
+  .workflow-step:hover {
+    background: rgb(var(--color-surface-soft));
+    color: rgb(var(--color-content-primary));
+  }
+  .workflow-step[aria-current="page"] {
+    color: rgb(var(--color-on-primary-container));
+    background: rgb(var(--color-primary-container));
+  }
+  .workflow-step-number {
+    display: grid;
+    width: 24px;
+    height: 24px;
+    place-items: center;
+    font-size: 12px;
+    border-radius: 50%;
+  }
+  .workflow-step[aria-current="page"] .workflow-step-number {
+    background: rgb(var(--color-primary));
+    color: rgb(var(--color-on-primary));
+  }
+  .workspace-progress-summary {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-radius: 12px;
+    background: rgb(var(--color-surface-inset));
+  }
+  .workspace-progress-summary h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(var(--color-content-primary));
+  }
+  .workspace-progress-summary p {
+    margin-top: 4px;
+    font-size: 12px;
+    color: rgb(var(--color-content-muted));
+  }
+  .app-workspace-frame {
+    position: relative;
+  }
+  .workspace-content {
+    min-height: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 16px;
+    background: rgb(var(--color-surface-base));
+  }
+  .materials-table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    font-size: 14px;
+    text-align: left;
+  }
+  .materials-table th {
+    padding: 10px 12px;
+    font-size: 12px;
+    font-weight: 500;
+    color: rgb(var(--color-content-muted));
+    background: rgb(var(--color-surface-inset));
+  }
+  .materials-table td {
+    padding: 12px;
+    vertical-align: top;
+    border-bottom: 1px solid rgb(var(--color-boundary-default) / 0.65);
+  }
+  .materials-table th:first-child {
+    width: 32%;
+  }
+  .materials-table th:nth-child(2) {
+    width: 15%;
+  }
+  .materials-table th:nth-child(3) {
+    width: 32%;
+  }
+  .materials-table th:nth-child(4) {
+    width: 13%;
+  }
+  .materials-table th:last-child {
+    width: 8%;
+  }
+  .materials-table tbody tr {
+    transition: background-color var(--motion-fast) var(--motion-easing);
+  }
+  .materials-table tbody tr:hover,
+  .materials-table tbody tr:focus-within {
+    background: rgb(var(--color-primary-container) / 0.35);
+  }
+  .workspace-panel-heading {
+    min-height: 52px;
+    padding: 12px 20px;
+  }
+  .workspace-panel-heading h2 {
+    font-size: 16px;
+    color: rgb(var(--color-content-primary));
+  }
+  @media (max-width: 1180px) {
+    .workspace-toolbar {
+      padding: 0 16px;
+      gap: 8px;
+    }
+    .window-drag-region {
+      padding-left: 16px;
+    }
+    .workflow-step {
+      min-width: 78px;
+      padding: 0 8px;
+      gap: 6px;
+    }
+    .project-actions-menu {
+      width: 150px;
+    }
+  }
+  @media (max-width: 1400px) {
+    .app-workspace-frame > [data-testid="context-rail"] {
+      position: absolute;
+      right: 16px;
+      top: 16px;
+      bottom: 16px;
+      z-index: 25;
+      width: 300px;
+      border: 1px solid rgb(var(--color-boundary-default));
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgb(var(--color-scrim) / 0.16);
+    }
+    .app-workspace-frame > [data-testid="project-sidebar"] {
+      position: absolute;
+      left: 16px;
+      top: 16px;
+      bottom: 16px;
+      z-index: 25;
+      border: 1px solid rgb(var(--color-boundary-default));
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgb(var(--color-scrim) / 0.16);
+    }
+  }
+}

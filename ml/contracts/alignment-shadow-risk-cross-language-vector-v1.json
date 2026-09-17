@@ -1,0 +1,95 @@
+{
+  "schemaVersion": "alignment-shadow-risk-cross-language-vector-v1",
+  "projectId": "cross-language-project-v1",
+  "record": {
+    "recordVersion": 1,
+    "id": "review:cross-language:0001",
+    "timeMapId": "map-cross-language",
+    "timeMapRevision": 3,
+    "spanId": "span-cross-language",
+    "spanIndex": 2,
+    "sourceMediaId": "source-cross",
+    "targetMediaId": "target-cross",
+    "mediaGroupId": "group-cross",
+    "action": "classifySpan",
+    "decision": "unresolved",
+    "precision": "rough",
+    "algorithmPrediction": "ambiguous",
+    "sourceStartMs": 1000,
+    "sourceEndMs": 11000,
+    "targetStartMs": 2500,
+    "targetEndMs": 12500,
+    "boundaryToleranceMs": 500,
+    "features": {
+      "sourceCoverage": 0.8,
+      "uniqueContentCoverage": 0.7,
+      "anchorCount": 8,
+      "heldOutAnchorCount": 3,
+      "anchorRegionCount": 2,
+      "p95ResidualMs": 120,
+      "p99ResidualMs": 180,
+      "maxResidualMs": 220,
+      "boundaryUncertaintyMs": 800,
+      "alternativeMargin": 0.15,
+      "ambiguousRatio": 0.6,
+      "bidirectionalAgreement": null,
+      "differenceRiskP50": 0.5,
+      "differenceRiskP90": 0.75,
+      "differenceRiskP99": 0.9,
+      "informativenessP50": 0.5,
+      "visualRecoveredRatio": 0.2,
+      "visualAmbiguousRatio": 0.7,
+      "visualMarginP50": 0.1
+    },
+    "engineVersion": "alignment-v2",
+    "featureVersion": "feature-v2",
+    "parametersHash": "sha256:parameters",
+    "supersedesRecordId": null,
+    "recordState": "active",
+    "reviewedAt": "2026-07-22T00:00:00.000Z"
+  },
+  "score": {
+    "schemaVersion": "alignment-shadow-risk-score-v1",
+    "recordId": "review:cross-language:0001",
+    "risk": 0.8125,
+    "reasonCodes": [
+      "global-audio-disagreement",
+      "audio-shadow-risk"
+    ]
+  },
+  "sourceRunId": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+  "generatedAt": "2026-07-22T16:30:00.000Z",
+  "association": {
+    "schemaVersion": "alignment-shadow-risk-association-v1",
+    "projectIdDigest": "sha256:e4a265d7a35732addf3da6595467acbca46e51c438ec7b63ad69cf935ac19e21",
+    "featureRecipeVersion": "rule-audio-local-support-risk-v1",
+    "records": [
+      {
+        "recordId": "review:cross-language:0001",
+        "recordEvidenceDigest": "sha256:3c57988a3f19e4fe0a0195684cd6f6e460c04bd5aac642244f3548f130a1ea6e"
+      }
+    ],
+    "permission": "association-only-no-labels",
+    "manifestId": "sha256:e1cf476387a15623e96d4607c98132746343cd07cfbce8a3f815a0e56d750f68"
+  },
+  "overlay": {
+    "schemaVersion": "alignment-shadow-risk-overlay-v1",
+    "projectIdDigest": "sha256:e4a265d7a35732addf3da6595467acbca46e51c438ec7b63ad69cf935ac19e21",
+    "featureRecipeVersion": "rule-audio-local-support-risk-v1",
+    "sourceRunId": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+    "generatedAt": "2026-07-22T16:30:00.000Z",
+    "permission": "shadow-review-ranking-only",
+    "entries": [
+      {
+        "recordId": "review:cross-language:0001",
+        "recordEvidenceDigest": "sha256:3c57988a3f19e4fe0a0195684cd6f6e460c04bd5aac642244f3548f130a1ea6e",
+        "risk": 0.8125,
+        "reasonCodes": [
+          "audio-shadow-risk",
+          "global-audio-disagreement"
+        ]
+      }
+    ],
+    "overlayId": "sha256:906593e918bc98fc87f2aefca8c8d1d31287bb062233f865a8f0f2412573895b"
+  }
+}

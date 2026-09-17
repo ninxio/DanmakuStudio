@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "alignment-multimodal-blind-review-cross-language-vector-v1",
+  "pack": {
+    "schemaVersion": "alignment-multimodal-blind-review-pack-v1",
+    "mediaFamilyId": "sha256:3169efd22efda6096620a254bc222abc97adcca574d21be984350e9b7882ebf3",
+    "inputs": {
+      "consensusResultId": "sha256:0be2c73637decd5bc8187eb60c55e5f9d2034ac16c2b69e13cf8a3071da8efe6",
+      "visualResultId": "sha256:334ed65b105e0030c74b45697560e690c5eaec7d0a2cb273268e5b10b7cc46cb",
+      "publicPlanId": "sha256:4c8d160f557bad43dc6f9f118ee0a5ce4ea9bd11b125287e4ab962350bd73cae"
+    },
+    "source": {
+      "path": "F:\\media\\reference.mkv",
+      "contentDigest": "sha256:373180cf2121ab055591a6e40aca135718321f4fc8ef31a5bc42f0217835874b",
+      "durationMs": 60000,
+      "videoStreamIndex": 0
+    },
+    "target": {
+      "path": "F:\\media\\original.mkv",
+      "contentDigest": "sha256:53079a59f25ee193d70fd4a12f4138fe533a81293b2f678e67d892328f097f60",
+      "durationMs": 65000,
+      "videoStreamIndex": 0
+    },
+    "tasks": [
+      {
+        "queryKey": "sha256:5dac66b7458f5900744423b145b0c48349eec0dff58c64da46ac6370df186a6a",
+        "sourceTimestampMs": 10000,
+        "sourcePreviewStartMs": 5000,
+        "sourcePreviewEndMs": 15000,
+        "targetReviewStartMs": 4000,
+        "targetReviewEndMs": 20000,
+        "candidateSlots": [
+          {
+            "slotId": "A",
+            "timestampMs": 11500
+          },
+          {
+            "slotId": "B",
+            "timestampMs": 12000
+          }
+        ],
+        "taskId": "sha256:4eeee4d9d4636cff7e816b0cfa4c812ffb347d927410c7e67a388e70ee2de047"
+      }
+    ],
+    "containsMediaPaths": true,
+    "predictionsBlinded": true,
+    "permission": "local-sensitive-blind-multimodal-review-only",
+    "releaseEligible": false,
+    "packId": "sha256:7ff8b6968039b643ea9d433c55bff8b07e07397e3baaaffbb079ae1a50af7d15"
+  },
+  "reviewerId": "reviewer-a",
+  "answers": [
+    {
+      "taskId": "sha256:4eeee4d9d4636cff7e816b0cfa4c812ffb347d927410c7e67a388e70ee2de047",
+      "decision": "matched",
+      "targetTimestampMs": 12000,
+      "boundaryToleranceMs": 500,
+      "precision": "frameAccurate"
+    }
+  ],
+  "expectedVoteSet": {
+    "schemaVersion": "alignment-multimodal-blind-review-vote-v1",
+    "packId": "sha256:7ff8b6968039b643ea9d433c55bff8b07e07397e3baaaffbb079ae1a50af7d15",
+    "reviewerIdDigest": "sha256:2f277341c28162f87d35c6be6e33dc751425c1d76cb2bee4fb6d1e2e0fdac7c7",
+    "votes": [
+      {
+        "taskId": "sha256:4eeee4d9d4636cff7e816b0cfa4c812ffb347d927410c7e67a388e70ee2de047",
+        "queryKey": "sha256:5dac66b7458f5900744423b145b0c48349eec0dff58c64da46ac6370df186a6a",
+        "decision": "matched",
+        "targetTimestampMs": 12000,
+        "boundaryToleranceMs": 500,
+        "precision": "frameAccurate"
+      }
+    ],
+    "permission": "local-blind-review-vote-only",
+    "releaseEligible": false,
+    "voteSetId": "sha256:761aab90c5389a18528168f407e15a4c95f7c071fde9e6e7b19689e6c3e33d1b"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "frames": [
+    { "timeMs": 0, "values": [0.1] },
+    { "timeMs": 10000, "values": [0.2] },
+    { "timeMs": 20000, "values": [0.5] },
+    { "timeMs": 30000, "values": [0.6] }
+  ]
+}

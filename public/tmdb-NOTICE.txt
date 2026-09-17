@@ -1,0 +1,5 @@
+TMDB logo obtained from the official TMDB attribution assets:
+https://www.themoviedb.org/about/logos-attribution
+https://www.themoviedb.org/assets/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg
+Used solely to attribute TMDB catalogue metadata. Original colours preserved.
+This product uses the TMDB API but is not endorsed or certified by TMDB.

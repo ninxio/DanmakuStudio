@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 2,
+  "id": "c137-real-media-manifest-example",
+  "name": "C137 真实媒体基准清单结构示例",
+  "datasetVersion": "example-only-0",
+  "description": "仅用于展示清单结构。路径、锚点和区间全部是占位值，不是真实媒体基准，也不得用于宣称精度通过。",
+  "isExample": true,
+  "licenseNotes": [
+    "本文件不包含媒体，不授予任何媒体许可；实际基准必须逐项记录合法来源和测试授权。"
+  ],
+  "cases": [
+    {
+      "id": "replace-with-real-relation-001",
+      "title": "占位关系：请替换为本地真实媒体和双人复核标注",
+      "mediaKind": "placeholder",
+      "split": "development",
+      "scenarios": ["global-offset", "target-only"],
+      "source": {
+        "path": "C:\\REPLACE_WITH_LOCAL_MEDIA\\bilibili-reference.mkv",
+        "audioStreamIndex": 1,
+        "videoStreamIndex": 0,
+        "contentIdentity": null,
+        "versionNote": "占位：记录 B 站参考的剪辑、编码、帧率和音轨版本。",
+        "licenseNote": "占位：实际运行前记录该本地素材的合法测试依据。"
+      },
+      "target": {
+        "path": "C:\\REPLACE_WITH_LOCAL_MEDIA\\original-episode.mkv",
+        "audioStreamIndex": 1,
+        "videoStreamIndex": 0,
+        "contentIdentity": null,
+        "versionNote": "占位：记录原片来源、编码、帧率和音轨版本。",
+        "licenseNote": "占位：实际运行前记录该本地素材的合法测试依据。"
+      },
+      "boundaryToleranceMs": 250,
+      "versionNotes": ["占位标注，不代表任何真实节目、删减位置或时间关系。"],
+      "licenseNotes": ["非真实基准；不得发布媒体路径，不得把本示例结果计入 C137 数据规模。"],
+      "independentAnnotations": [],
+      "adjudication": null,
+      "gold": {
+        "sourceStartMs": 0,
+        "sourceEndMs": 60000,
+        "targetStartMs": 0,
+        "targetEndMs": 65000,
+        "matchedAnchors": [
+          { "id": "placeholder-anchor-1", "sourceMs": 0, "targetMs": 0 },
+          { "id": "placeholder-anchor-2", "sourceMs": 20000, "targetMs": 20000 },
+          { "id": "placeholder-anchor-3", "sourceMs": 30000, "targetMs": 35000 },
+          { "id": "placeholder-anchor-4", "sourceMs": 59000, "targetMs": 64000 }
+        ],
+        "sourceOnlySpans": [],
+        "targetOnlySpans": [
+          {
+            "kind": "targetOnly",
+            "sourceStartMs": 30000,
+            "sourceEndMs": 30000,
+            "targetStartMs": 30000,
+            "targetEndMs": 35000
+          }
+        ],
+        "ambiguousSpans": []
+      }
+    }
+  ]
+}

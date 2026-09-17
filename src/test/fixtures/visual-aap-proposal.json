@@ -1,0 +1,1153 @@
+{
+  "anchors": [
+    {
+      "id": "aap-anchor-0",
+      "sourceMs": 0,
+      "targetMs": 0,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-1",
+      "sourceMs": 250,
+      "targetMs": 250,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-2",
+      "sourceMs": 500,
+      "targetMs": 500,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-3",
+      "sourceMs": 750,
+      "targetMs": 750,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-4",
+      "sourceMs": 1000,
+      "targetMs": 1000,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-5",
+      "sourceMs": 1250,
+      "targetMs": 1250,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-6",
+      "sourceMs": 1500,
+      "targetMs": 1500,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-7",
+      "sourceMs": 1750,
+      "targetMs": 1750,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-8",
+      "sourceMs": 2000,
+      "targetMs": 2000,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-9",
+      "sourceMs": 2250,
+      "targetMs": 2250,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-10",
+      "sourceMs": 2500,
+      "targetMs": 2500,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-11",
+      "sourceMs": 2750,
+      "targetMs": 2750,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-12",
+      "sourceMs": 3000,
+      "targetMs": 3000,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-13",
+      "sourceMs": 3250,
+      "targetMs": 3250,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-14",
+      "sourceMs": 3500,
+      "targetMs": 3500,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-15",
+      "sourceMs": 3750,
+      "targetMs": 3750,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-16",
+      "sourceMs": 4000,
+      "targetMs": 4000,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-17",
+      "sourceMs": 4250,
+      "targetMs": 4250,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-18",
+      "sourceMs": 4500,
+      "targetMs": 4500,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-19",
+      "sourceMs": 4750,
+      "targetMs": 4750,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-20",
+      "sourceMs": 5000,
+      "targetMs": 5000,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-21",
+      "sourceMs": 5250,
+      "targetMs": 5250,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-22",
+      "sourceMs": 5500,
+      "targetMs": 5500,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-23",
+      "sourceMs": 5750,
+      "targetMs": 5750,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-24",
+      "sourceMs": 6000,
+      "targetMs": 6000,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-25",
+      "sourceMs": 6250,
+      "targetMs": 6250,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-26",
+      "sourceMs": 6500,
+      "targetMs": 6500,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-27",
+      "sourceMs": 6750,
+      "targetMs": 6750,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-28",
+      "sourceMs": 7000,
+      "targetMs": 7000,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-29",
+      "sourceMs": 7250,
+      "targetMs": 7250,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-30",
+      "sourceMs": 7500,
+      "targetMs": 7500,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-31",
+      "sourceMs": 7750,
+      "targetMs": 7750,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-32",
+      "sourceMs": 8000,
+      "targetMs": 8000,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-33",
+      "sourceMs": 8250,
+      "targetMs": 8250,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-34",
+      "sourceMs": 8500,
+      "targetMs": 8500,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-35",
+      "sourceMs": 8750,
+      "targetMs": 8750,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-36",
+      "sourceMs": 9000,
+      "targetMs": 9000,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-37",
+      "sourceMs": 9250,
+      "targetMs": 9250,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-38",
+      "sourceMs": 9500,
+      "targetMs": 9500,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-39",
+      "sourceMs": 9750,
+      "targetMs": 9750,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-40",
+      "sourceMs": 14000,
+      "targetMs": 10000,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-41",
+      "sourceMs": 14250,
+      "targetMs": 10250,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-42",
+      "sourceMs": 14500,
+      "targetMs": 10500,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-43",
+      "sourceMs": 14750,
+      "targetMs": 10750,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-44",
+      "sourceMs": 15000,
+      "targetMs": 11000,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-45",
+      "sourceMs": 15250,
+      "targetMs": 11250,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-46",
+      "sourceMs": 15500,
+      "targetMs": 11500,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-47",
+      "sourceMs": 15750,
+      "targetMs": 11750,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-48",
+      "sourceMs": 16000,
+      "targetMs": 12000,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-49",
+      "sourceMs": 16250,
+      "targetMs": 12250,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-50",
+      "sourceMs": 16500,
+      "targetMs": 12500,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-51",
+      "sourceMs": 16750,
+      "targetMs": 12750,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-52",
+      "sourceMs": 17000,
+      "targetMs": 13000,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-53",
+      "sourceMs": 17250,
+      "targetMs": 13250,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-54",
+      "sourceMs": 17500,
+      "targetMs": 13500,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-55",
+      "sourceMs": 17750,
+      "targetMs": 13750,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-56",
+      "sourceMs": 18000,
+      "targetMs": 14000,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-57",
+      "sourceMs": 18250,
+      "targetMs": 14250,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-58",
+      "sourceMs": 18500,
+      "targetMs": 14500,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-59",
+      "sourceMs": 18750,
+      "targetMs": 14750,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-60",
+      "sourceMs": 19000,
+      "targetMs": 17000,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-61",
+      "sourceMs": 19250,
+      "targetMs": 17250,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-62",
+      "sourceMs": 19500,
+      "targetMs": 17500,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-63",
+      "sourceMs": 19750,
+      "targetMs": 17750,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-64",
+      "sourceMs": 20000,
+      "targetMs": 18000,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-65",
+      "sourceMs": 20250,
+      "targetMs": 18250,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-66",
+      "sourceMs": 20500,
+      "targetMs": 18500,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-67",
+      "sourceMs": 20750,
+      "targetMs": 18750,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-68",
+      "sourceMs": 21000,
+      "targetMs": 19000,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-69",
+      "sourceMs": 21250,
+      "targetMs": 19250,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-70",
+      "sourceMs": 21500,
+      "targetMs": 19500,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-71",
+      "sourceMs": 21750,
+      "targetMs": 19750,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-72",
+      "sourceMs": 22000,
+      "targetMs": 20000,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-73",
+      "sourceMs": 22250,
+      "targetMs": 20250,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-74",
+      "sourceMs": 22500,
+      "targetMs": 20500,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-75",
+      "sourceMs": 22750,
+      "targetMs": 20750,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-76",
+      "sourceMs": 23000,
+      "targetMs": 21000,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-77",
+      "sourceMs": 23250,
+      "targetMs": 21250,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-78",
+      "sourceMs": 23500,
+      "targetMs": 21500,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-79",
+      "sourceMs": 23750,
+      "targetMs": 21750,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-80",
+      "sourceMs": 24000,
+      "targetMs": 22000,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-81",
+      "sourceMs": 24250,
+      "targetMs": 22250,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-82",
+      "sourceMs": 24500,
+      "targetMs": 22500,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-83",
+      "sourceMs": 24750,
+      "targetMs": 22750,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-84",
+      "sourceMs": 25000,
+      "targetMs": 23000,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-85",
+      "sourceMs": 25250,
+      "targetMs": 23250,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-86",
+      "sourceMs": 25500,
+      "targetMs": 23500,
+      "confidence": 0.7,
+      "origin": "automatic"
+    },
+    {
+      "id": "aap-anchor-87",
+      "sourceMs": 25750,
+      "targetMs": 23750,
+      "confidence": 0.7,
+      "origin": "automatic"
+    }
+  ],
+  "cutCandidates": [],
+  "confidence": 0.5721153846153846,
+  "diagnostics": [
+    "AAP：参考 104 帧，原片 96 帧，保留 88 个视觉锚点、3 个共同内容段，0 帧存在竞争位置。"
+  ],
+  "evidence": {
+    "algorithm": "visual-aap-v1",
+    "completeFingerprintCount": 96,
+    "sourceFingerprintCount": 104,
+    "fingerprintMatchCount": 88,
+    "monotonicMatchCount": 88,
+    "strongAnchorCount": 0,
+    "weakAnchorCount": 88,
+    "offsetClusterCount": 3,
+    "refinedCandidateCount": 0,
+    "lowConfidenceRegionCount": 3,
+    "quality": "medium",
+    "timeMappingSegmentCount": 3,
+    "confirmedChangeCount": 0,
+    "signals": [
+      {
+        "kind": "visual",
+        "status": "used",
+        "label": "AAP pHash 分段画面匹配",
+        "observations": 88,
+        "weight": 1.0,
+        "note": "本地视觉候选；不宣称自动验证或毫秒级切点。"
+      }
+    ]
+  },
+  "matchRange": {
+    "sourceStartMs": 0,
+    "sourceEndMs": 26000,
+    "targetStartMs": 0,
+    "targetEndMs": 24000,
+    "coverage": 0.8173076923076923
+  },
+  "timeMap": {
+    "sourceStartMs": 0,
+    "sourceEndMs": 26000,
+    "targetStartMs": 0,
+    "targetEndMs": 24000,
+    "spans": [
+      {
+        "id": "aap-span-0",
+        "kind": "matched",
+        "sourceStartMs": 0,
+        "sourceEndMs": 9750,
+        "targetStartMs": 0,
+        "targetEndMs": 9750,
+        "reason": "连续唯一画面指纹支持本段映射；未跨越长无证据区。",
+        "quality": {
+          "level": "review",
+          "metricSource": "measured",
+          "probability": null,
+          "coverage": 1.0,
+          "uniqueContentCoverage": 1.0,
+          "alternativeMargin": null,
+          "anchorCount": 40,
+          "heldOutAnchorCount": 0,
+          "p50ResidualMs": null,
+          "p95ResidualMs": null,
+          "p99ResidualMs": null,
+          "maxResidualMs": 0,
+          "boundaryUncertaintyMs": 500,
+          "leftSupport": "unsupported",
+          "rightSupport": "unsupported",
+          "signals": {
+            "audio": "blocked",
+            "visual": "used",
+            "danmaku": "blocked"
+          },
+          "reasons": [
+            "连续唯一画面指纹支持本段映射；未跨越长无证据区。",
+            "画面采样仍有边界误差，需要逐段检查。"
+          ]
+        },
+        "boundaries": {
+          "start": {
+            "status": "notApplicable",
+            "axis": "both",
+            "contextSide": null,
+            "coarseMs": null,
+            "refinedMs": null,
+            "uncertaintyStartMs": null,
+            "uncertaintyEndMs": null,
+            "supportDurationMs": 0,
+            "correlation": null,
+            "alternativeMargin": null,
+            "reason": "边界位于首个视觉观测，未断言精确切点。"
+          },
+          "end": {
+            "status": "notApplicable",
+            "axis": "both",
+            "contextSide": null,
+            "coarseMs": null,
+            "refinedMs": null,
+            "uncertaintyStartMs": null,
+            "uncertaintyEndMs": null,
+            "supportDurationMs": 0,
+            "correlation": null,
+            "alternativeMargin": null,
+            "reason": "边界位于最后视觉观测，未向未观察内容外推。"
+          }
+        },
+        "alternatives": []
+      },
+      {
+        "id": "aap-span-1",
+        "kind": "ambiguous",
+        "sourceStartMs": 9750,
+        "sourceEndMs": 14000,
+        "targetStartMs": 9750,
+        "targetEndMs": 10000,
+        "reason": "此区间缺少唯一连续视觉证据，弹幕不会按最近匹配帧自动投射。",
+        "quality": {
+          "level": "blocked",
+          "metricSource": "measured",
+          "probability": null,
+          "coverage": null,
+          "uniqueContentCoverage": null,
+          "alternativeMargin": null,
+          "anchorCount": 0,
+          "heldOutAnchorCount": 0,
+          "p50ResidualMs": null,
+          "p95ResidualMs": null,
+          "p99ResidualMs": null,
+          "maxResidualMs": null,
+          "boundaryUncertaintyMs": null,
+          "leftSupport": "unsupported",
+          "rightSupport": "unsupported",
+          "signals": {
+            "audio": "blocked",
+            "visual": "blocked",
+            "danmaku": "blocked"
+          },
+          "reasons": [
+            "此区间缺少唯一连续视觉证据，弹幕不会按最近匹配帧自动投射。"
+          ]
+        },
+        "boundaries": {
+          "start": {
+            "status": "ambiguous",
+            "axis": "both",
+            "contextSide": null,
+            "coarseMs": null,
+            "refinedMs": null,
+            "uncertaintyStartMs": null,
+            "uncertaintyEndMs": null,
+            "supportDurationMs": 0,
+            "correlation": null,
+            "alternativeMargin": null,
+            "reason": "该 span 本身存在歧义，不能声明精确边界。"
+          },
+          "end": {
+            "status": "ambiguous",
+            "axis": "both",
+            "contextSide": null,
+            "coarseMs": null,
+            "refinedMs": null,
+            "uncertaintyStartMs": null,
+            "uncertaintyEndMs": null,
+            "supportDurationMs": 0,
+            "correlation": null,
+            "alternativeMargin": null,
+            "reason": "该 span 本身存在歧义，不能声明精确边界。"
+          }
+        },
+        "alternatives": []
+      },
+      {
+        "id": "aap-span-2",
+        "kind": "matched",
+        "sourceStartMs": 14000,
+        "sourceEndMs": 18750,
+        "targetStartMs": 10000,
+        "targetEndMs": 14750,
+        "reason": "连续唯一画面指纹支持本段映射；未跨越长无证据区。",
+        "quality": {
+          "level": "review",
+          "metricSource": "measured",
+          "probability": null,
+          "coverage": 1.0,
+          "uniqueContentCoverage": 1.0,
+          "alternativeMargin": null,
+          "anchorCount": 20,
+          "heldOutAnchorCount": 0,
+          "p50ResidualMs": null,
+          "p95ResidualMs": null,
+          "p99ResidualMs": null,
+          "maxResidualMs": 0,
+          "boundaryUncertaintyMs": 500,
+          "leftSupport": "unsupported",
+          "rightSupport": "unsupported",
+          "signals": {
+            "audio": "blocked",
+            "visual": "used",
+            "danmaku": "blocked"
+          },
+          "reasons": [
+            "连续唯一画面指纹支持本段映射；未跨越长无证据区。",
+            "画面采样仍有边界误差，需要逐段检查。"
+          ]
+        },
+        "boundaries": {
+          "start": {
+            "status": "notApplicable",
+            "axis": "both",
+            "contextSide": null,
+            "coarseMs": null,
+            "refinedMs": null,
+            "uncertaintyStartMs": null,
+            "uncertaintyEndMs": null,
+            "supportDurationMs": 0,
+            "correlation": null,
+            "alternativeMargin": null,
+            "reason": "边界位于首个视觉观测，未断言精确切点。"
+          },
+          "end": {
+            "status": "notApplicable",
+            "axis": "both",
+            "contextSide": null,
+            "coarseMs": null,
+            "refinedMs": null,
+            "uncertaintyStartMs": null,
+            "uncertaintyEndMs": null,
+            "supportDurationMs": 0,
+            "correlation": null,
+            "alternativeMargin": null,
+            "reason": "边界位于最后视觉观测，未向未观察内容外推。"
+          }
+        },
+        "alternatives": []
+      },
+      {
+        "id": "aap-span-3",
+        "kind": "ambiguous",
+        "sourceStartMs": 18750,
+        "sourceEndMs": 19000,
+        "targetStartMs": 14750,
+        "targetEndMs": 17000,
+        "reason": "此区间缺少唯一连续视觉证据，弹幕不会按最近匹配帧自动投射。",
+        "quality": {
+          "level": "blocked",
+          "metricSource": "measured",
+          "probability": null,
+          "coverage": null,
+          "uniqueContentCoverage": null,
+          "alternativeMargin": null,
+          "anchorCount": 0,
+          "heldOutAnchorCount": 0,
+          "p50ResidualMs": null,
+          "p95ResidualMs": null,
+          "p99ResidualMs": null,
+          "maxResidualMs": null,
+          "boundaryUncertaintyMs": null,
+          "leftSupport": "unsupported",
+          "rightSupport": "unsupported",
+          "signals": {
+            "audio": "blocked",
+            "visual": "blocked",
+            "danmaku": "blocked"
+          },
+          "reasons": [
+            "此区间缺少唯一连续视觉证据，弹幕不会按最近匹配帧自动投射。"
+          ]
+        },
+        "boundaries": {
+          "start": {
+            "status": "ambiguous",
+            "axis": "both",
+            "contextSide": null,
+            "coarseMs": null,
+            "refinedMs": null,
+            "uncertaintyStartMs": null,
+            "uncertaintyEndMs": null,
+            "supportDurationMs": 0,
+            "correlation": null,
+            "alternativeMargin": null,
+            "reason": "该 span 本身存在歧义，不能声明精确边界。"
+          },
+          "end": {
+            "status": "ambiguous",
+            "axis": "both",
+            "contextSide": null,
+            "coarseMs": null,
+            "refinedMs": null,
+            "uncertaintyStartMs": null,
+            "uncertaintyEndMs": null,
+            "supportDurationMs": 0,
+            "correlation": null,
+            "alternativeMargin": null,
+            "reason": "该 span 本身存在歧义，不能声明精确边界。"
+          }
+        },
+        "alternatives": []
+      },
+      {
+        "id": "aap-span-4",
+        "kind": "matched",
+        "sourceStartMs": 19000,
+        "sourceEndMs": 25750,
+        "targetStartMs": 17000,
+        "targetEndMs": 23750,
+        "reason": "连续唯一画面指纹支持本段映射；未跨越长无证据区。",
+        "quality": {
+          "level": "review",
+          "metricSource": "measured",
+          "probability": null,
+          "coverage": 1.0,
+          "uniqueContentCoverage": 1.0,
+          "alternativeMargin": null,
+          "anchorCount": 28,
+          "heldOutAnchorCount": 0,
+          "p50ResidualMs": null,
+          "p95ResidualMs": null,
+          "p99ResidualMs": null,
+          "maxResidualMs": 0,
+          "boundaryUncertaintyMs": 500,
+          "leftSupport": "unsupported",
+          "rightSupport": "unsupported",
+          "signals": {
+            "audio": "blocked",
+            "visual": "used",
+            "danmaku": "blocked"
+          },
+          "reasons": [
+            "连续唯一画面指纹支持本段映射；未跨越长无证据区。",
+            "画面采样仍有边界误差，需要逐段检查。"
+          ]
+        },
+        "boundaries": {
+          "start": {
+            "status": "notApplicable",
+            "axis": "both",
+            "contextSide": null,
+            "coarseMs": null,
+            "refinedMs": null,
+            "uncertaintyStartMs": null,
+            "uncertaintyEndMs": null,
+            "supportDurationMs": 0,
+            "correlation": null,
+            "alternativeMargin": null,
+            "reason": "边界位于首个视觉观测，未断言精确切点。"
+          },
+          "end": {
+            "status": "notApplicable",
+            "axis": "both",
+            "contextSide": null,
+            "coarseMs": null,
+            "refinedMs": null,
+            "uncertaintyStartMs": null,
+            "uncertaintyEndMs": null,
+            "supportDurationMs": 0,
+            "correlation": null,
+            "alternativeMargin": null,
+            "reason": "边界位于最后视觉观测，未向未观察内容外推。"
+          }
+        },
+        "alternatives": []
+      },
+      {
+        "id": "aap-span-5",
+        "kind": "ambiguous",
+        "sourceStartMs": 25750,
+        "sourceEndMs": 26000,
+        "targetStartMs": 23750,
+        "targetEndMs": 24000,
+        "reason": "此区间缺少唯一连续视觉证据，弹幕不会按最近匹配帧自动投射。",
+        "quality": {
+          "level": "blocked",
+          "metricSource": "measured",
+          "probability": null,
+          "coverage": null,
+          "uniqueContentCoverage": null,
+          "alternativeMargin": null,
+          "anchorCount": 0,
+          "heldOutAnchorCount": 0,
+          "p50ResidualMs": null,
+          "p95ResidualMs": null,
+          "p99ResidualMs": null,
+          "maxResidualMs": null,
+          "boundaryUncertaintyMs": null,
+          "leftSupport": "unsupported",
+          "rightSupport": "unsupported",
+          "signals": {
+            "audio": "blocked",
+            "visual": "blocked",
+            "danmaku": "blocked"
+          },
+          "reasons": [
+            "此区间缺少唯一连续视觉证据，弹幕不会按最近匹配帧自动投射。"
+          ]
+        },
+        "boundaries": {
+          "start": {
+            "status": "ambiguous",
+            "axis": "both",
+            "contextSide": null,
+            "coarseMs": null,
+            "refinedMs": null,
+            "uncertaintyStartMs": null,
+            "uncertaintyEndMs": null,
+            "supportDurationMs": 0,
+            "correlation": null,
+            "alternativeMargin": null,
+            "reason": "该 span 本身存在歧义，不能声明精确边界。"
+          },
+          "end": {
+            "status": "ambiguous",
+            "axis": "both",
+            "contextSide": null,
+            "coarseMs": null,
+            "refinedMs": null,
+            "uncertaintyStartMs": null,
+            "uncertaintyEndMs": null,
+            "supportDurationMs": 0,
+            "correlation": null,
+            "alternativeMargin": null,
+            "reason": "该 span 本身存在歧义，不能声明精确边界。"
+          }
+        },
+        "alternatives": []
+      }
+    ],
+    "quality": {
+      "level": "review",
+      "metricSource": "measured",
+      "probability": null,
+      "coverage": 0.8173076923076923,
+      "uniqueContentCoverage": 0.8173076923076923,
+      "p50ResidualMs": null,
+      "p95ResidualMs": null,
+      "p99ResidualMs": null,
+      "maxResidualMs": null,
+      "boundaryUncertaintyMs": 500,
+      "alternativeMargin": null,
+      "anchorCount": 88,
+      "anchorRegionCount": 3,
+      "heldOutAnchorCount": 0,
+      "reasons": [
+        "AAP 根据连续画面生成分段候选；未匹配、重复镜头和边界区域需要确认。",
+        "250 ms 采样网格；边界不确定度至少 500 ms。未做概率校准，不自动签发成品验证。"
+      ]
+    },
+    "evidence": {
+      "types": [
+        "visual"
+      ],
+      "audioAnchorCount": 0,
+      "visualAnchorCount": 88,
+      "heldOutAnchorCount": 0,
+      "top1Top2Margin": null,
+      "uniqueContentCoverage": 0.8173076923076923,
+      "repeatedContentOnly": false,
+      "selectedTrackReason": "显式 AAP 视频流；不依赖音频或云端模型。",
+      "alternativeTrackScores": [],
+      "notes": [
+        "AAP：参考 104 帧，原片 96 帧，保留 88 个视觉锚点、3 个共同内容段，0 帧存在竞争位置。"
+      ]
+    },
+    "sourceStream": {
+      "type": "video",
+      "index": 0,
+      "codec": "h264",
+      "startMs": 0,
+      "timelineOffsetMs": 0,
+      "timeBase": "1/16384",
+      "sampleRate": null,
+      "channels": null,
+      "frameRate": 4.0,
+      "language": "und",
+      "title": null
+    },
+    "targetStream": {
+      "type": "video",
+      "index": 0,
+      "codec": "ffv1",
+      "startMs": 0,
+      "timelineOffsetMs": 0,
+      "timeBase": "1/1000",
+      "sampleRate": null,
+      "channels": null,
+      "frameRate": 4.0,
+      "language": null,
+      "title": null
+    },
+    "sourceVisualStream": {
+      "type": "video",
+      "index": 0,
+      "codec": "h264",
+      "startMs": 0,
+      "timelineOffsetMs": 0,
+      "timeBase": "1/16384",
+      "sampleRate": null,
+      "channels": null,
+      "frameRate": 4.0,
+      "language": "und",
+      "title": null
+    },
+    "targetVisualStream": {
+      "type": "video",
+      "index": 0,
+      "codec": "ffv1",
+      "startMs": 0,
+      "timelineOffsetMs": 0,
+      "timeBase": "1/1000",
+      "sampleRate": null,
+      "channels": null,
+      "frameRate": 4.0,
+      "language": null,
+      "title": null
+    },
+    "sourceIdentity": {
+      "algorithm": "sha256-full-file-v2",
+      "sizeBytes": 126333,
+      "modifiedUnixMs": 1789663709485,
+      "firstSampleDigest": "e96b501d5cdff25fa8b7202ada56a40e9c3a9dee112fe5fb4b09af7c692cf8a6",
+      "middleSampleDigest": "e96b501d5cdff25fa8b7202ada56a40e9c3a9dee112fe5fb4b09af7c692cf8a6",
+      "lastSampleDigest": "e96b501d5cdff25fa8b7202ada56a40e9c3a9dee112fe5fb4b09af7c692cf8a6"
+    },
+    "targetIdentity": {
+      "algorithm": "sha256-full-file-v2",
+      "sizeBytes": 46017,
+      "modifiedUnixMs": 1789663709363,
+      "firstSampleDigest": "046d8f26032fbe11efa098b9d22ccc22c9b98ad7124cec77fab70e1d007feea3",
+      "middleSampleDigest": "046d8f26032fbe11efa098b9d22ccc22c9b98ad7124cec77fab70e1d007feea3",
+      "lastSampleDigest": "046d8f26032fbe11efa098b9d22ccc22c9b98ad7124cec77fab70e1d007feea3"
+    },
+    "engineVersion": "visual-aap-v1",
+    "featureVersion": "phash-dct32-low8-no-dc-gray-v1",
+    "parametersHash": "aap-v1-step250-distance10-margin2-run8-scale080-125"
+  }
+}
