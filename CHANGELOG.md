@@ -9,11 +9,13 @@
 - 上传前检查兼容格式、10 MiB / 20 万条上限及已知内容变化；原始 XML 保留本地。
 - 新增中英文 README、合成界面示例、操作步骤、隐私说明及使用端配置指南。
 - 精简首页说明，补充使用与权利联系说明。
+- 更新“关于”页的产品介绍和 MD3 样式，修正参考项目致谢，并明确 AAP 尚未经过实际使用测试。
+- 使用手工绘制的双对话气泡 SVG 图标，统一窗口、关于页、网页图标及桌面安装包。
 - 旧版专用连接保留兼容入口，不自动迁移。
 
 ## 0.4.0 — 本地 AAP
 
-独立画面感知哈希匹配、无音轨输入、分段时间映射、候选检查与保存恢复；移除 Gemini，改进本地媒体访问和凭据管理。
+尝试实现画面感知哈希匹配、无音轨输入、分段时间映射、候选检查与保存恢复；AAP 尚未经过实际使用测试，保留供后续 fork 验证和改进。移除 Gemini，改进本地媒体访问和凭据管理。
 
 ## 0.3 — 影视与季集资料
 
@@ -30,7 +32,7 @@
 ## English overview
 
 - **0.4.1:** LogVar connection and uploads, explicit review, limits and readback checks; bilingual documentation and synthetic UI previews.
-- **0.4.0:** local AAP, Gemini removal and improvements to media access and credential management.
+- **0.4.0:** experimental local AAP (not tested in actual use), Gemini removal and improvements to media access and credential management.
 - **0.3:** title metadata and season/episode workflows.
 - **0.2 series:** unified workspaces, recovery, episode handling and private library updates.
 - **Early / 0.1 series:** XML and ASS utilities evolved into audio alignment and a desktop editor.

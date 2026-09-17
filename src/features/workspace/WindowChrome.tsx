@@ -1,4 +1,3 @@
-import { Layers3 } from "lucide-react";
 import { DesktopWindowControls } from "./DesktopWindowControls";
 
 /** Business controls never enter this hit-test surface. Tauri owns drag/double-click. */
@@ -11,7 +10,7 @@ export function WindowChrome() {
         data-testid="window-drag-region"
       >
         <span className="pointer-events-none flex items-center gap-2">
-          <Layers3 size={16} className="text-primary" aria-hidden="true" />
+          <img src="/app-icon.svg" width="20" height="20" alt="" draggable={false} />
           <span>Danmaku Studio</span>
         </span>
       </div>

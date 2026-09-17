@@ -15,7 +15,8 @@ test("AAP is selectable without audio preparation and explains native-backend er
   await page.getByTestId("workspace-nav-matching").click();
   await page.getByLabel("匹配方式").selectOption("visual-aap");
   const panel = page.getByRole("region", { name: "AAP 画面匹配" });
-  await expect(panel).toContainText("全部计算在本机完成，需要两侧的视频文件");
+  await expect(panel).toContainText("需要两侧的视频文件");
+  await expect(panel).toContainText("目前尚未经过实际使用验证，请逐段检查结果");
   for (const checkbox of await panel.getByRole("checkbox").all()) await checkbox.check();
   await expect(panel.getByRole("button", { name: "开始画面匹配" })).toBeEnabled();
   await panel.getByRole("button", { name: "开始画面匹配" }).click();

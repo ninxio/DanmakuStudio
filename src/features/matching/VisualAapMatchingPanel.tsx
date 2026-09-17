@@ -164,9 +164,9 @@ export function VisualAapMatchingPanel({
   return (
     <section className="grid gap-4" aria-label="AAP 画面匹配">
       <div className="rounded border border-panel-line bg-surface-inset p-4">
-        <h2 className="font-semibold">画面匹配 AAP</h2>
+        <h2 className="font-semibold">画面匹配 AAP · 实验性</h2>
         <p className="mt-2 text-sm text-content-secondary">
-          适合画面相同但音轨不同、被配音或没有音轨的视频。全部计算在本机完成，需要两侧的视频文件。暂不适合大幅裁切、重新绘制或镜头乱序。
+          尝试通过相似画面对齐音轨不同或没有音轨的视频，需要两侧的视频文件。目前尚未经过实际使用验证，请逐段检查结果。
         </p>
         <p className="mt-2 text-sm text-content-muted">
           自动建立分段候选；重复画面、无关填充和未观察边界保留待确认，不会把这些弹幕硬套到最近一帧。
