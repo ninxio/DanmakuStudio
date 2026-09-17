@@ -23,13 +23,13 @@
     },
     {
       "path": "README.en.md",
-      "sha256": "62a691943ed2f373b7a630255ebdc8bd995e7a0592450851fd8f4bf47b315925",
-      "bytes": 8825
+      "sha256": "505ff6cd384792e169dc84b78d045d5aec24313912a2dff1ab1b0e8f0e992fe5",
+      "bytes": 8394
     },
     {
       "path": "README.md",
-      "sha256": "005a09a2e84f43c09cf2efd0531a30f791d9d99c063a24c82ce2b089eeb3953c",
-      "bytes": 8493
+      "sha256": "c4e34789253cc8c3ba4a9f418ed60e2d62f39000537cf985bf599e83fbec2574",
+      "bytes": 8194
     },
     {
       "path": "RELEASE_NOTES.md",
@@ -63,8 +63,8 @@
     },
     {
       "path": "docs/PRIVACY.md",
-      "sha256": "93df26faaa593e6eeb20eb50f0fa236fa80d269f50277503862121e1f5ff5f6e",
-      "bytes": 2400
+      "sha256": "5094f58bee62b815dc9c6eb28253ac6e6c843726691afebd7815c03f71645d27",
+      "bytes": 2347
     },
     {
       "path": "docs/USER_GUIDE.md",
