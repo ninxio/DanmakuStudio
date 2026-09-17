@@ -10,7 +10,9 @@
 - 列出已有影视，选择 XML 或使用本次导出的弹幕，预览新增／替换范围，再上传并通过播放器接口回读核验。支持只补缺集和在文件之间停止。
 - 凭据由 Windows 加密保存在当前用户本机。旧版专用服务保留独立入口，不自动迁移凭据和云端数据。
 - 更新中英文 README、无私人数据的真实界面预览、操作指南、原理说明和概述式版本历史。
-- 保留 0.4.0 的本地音频匹配、AAP 画面匹配、纯 XML 编辑与 XML/ASS 导出。
+- 更新 MD3 “关于”页与参考项目致谢，版本仍为 0.4.1。
+- 以手工绘制的 SVG 双对话气泡统一应用图标。
+- 保留本地音频匹配、纯 XML 编辑与 XML/ASS 导出。AAP 为尚未经过实际使用测试的实验性实现，供后续 fork 验证和改进。
 
 **下载与运行：** Windows x64 安装包 `DanmakuStudio_0.4.1_windows_x64_setup.exe`。自动匹配需自行配置 FFmpeg/FFprobe；MKV/HEVC 等应用内预览需兼容 libmpv。安装包不附带这些工具或影片。
 
@@ -26,6 +28,8 @@ This update connects the private-library workflow to [LogVar / danmu_api](https:
 - Browse existing titles, select XML files or the current export, review additions and replacements, then upload and verify the result through the player endpoint. Missing-episode-only mode and stopping between files are supported.
 - Credentials are encrypted locally for the current Windows user. Existing legacy connections remain separate.
 - Adds bilingual documentation, actual UI screenshots made with synthetic data, workflow instructions and an approximate version history. The application UI remains in Simplified Chinese.
+- Refreshes the MD3 About page and project acknowledgements while keeping version 0.4.1. AAP remains experimental, untested in actual use, and available for future forks to validate and improve.
+- Uses a hand-drawn SVG speech-bubble icon across the application and desktop package.
 
 **Windows x64:** `DanmakuStudio_0.4.1_windows_x64_setup.exe`. FFmpeg/FFprobe and compatible libmpv are external requirements for matching and some media previews; they and media files are not bundled.
 

@@ -298,15 +298,30 @@ describe("设置中心", () => {
     expect(loadAppSettings().export.defaultDirectory).toBe("D:\\danmaku exports");
   });
 
-  it("关于页展示当前成熟度提升主线", async () => {
+  it("关于页展示产品信息并可直接关闭", async () => {
     const user = userEvent.setup();
-    render(<SettingsDialog onClose={() => undefined} />);
+    const onClose = vi.fn();
+    render(<SettingsDialog onClose={onClose} />);
 
     await user.click(screen.getByRole("button", { name: "关于" }));
 
-    expect(
-      screen.getByText("成熟度提升主线：播放器工具链、音频对齐与项目安全硬化")
-    ).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Danmaku Studio" })).toBeInTheDocument();
+    expect(screen.getByText("开源许可 · GPL-3.0-only")).toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: /保存设置/ })).not.toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "关闭" }));
+    expect(onClose).toHaveBeenCalledOnce();
+  });
+
+  it("切到关于页后仍可保存其他页面的设置草稿", async () => {
+    const user = userEvent.setup();
+    render(<SettingsDialog onClose={() => undefined} />);
+    await user.click(screen.getByRole("button", { name: "导出" }));
+    fireEvent.change(screen.getByLabelText("默认导出目录"), {
+      target: { value: "D:\\exports" }
+    });
+    await user.click(screen.getByRole("button", { name: "关于" }));
+    await user.click(screen.getByRole("button", { name: /保存设置/ }));
+    expect(loadAppSettings().export.defaultDirectory).toBe("D:\\exports");
   });
 
   it("可以清除本地应用设置", async () => {
@@ -430,7 +445,14 @@ describe("设置中心", () => {
 
   it("可以从设置备份导入非敏感配置", async () => {
     const user = userEvent.setup();
-    saveAppSettings({ ...loadAppSettings(), emby: { serverUrl: "https://original.example.test", pathPrefix: "/emby", username: "owner" } });
+    saveAppSettings({
+      ...loadAppSettings(),
+      emby: {
+        serverUrl: "https://original.example.test",
+        pathPrefix: "/emby",
+        username: "owner"
+      }
+    });
     saveVolatileEmbyPassword("original-private-password");
     render(<SettingsDialog onClose={() => undefined} />);
     const file = new File(
@@ -522,13 +544,25 @@ describe("设置中心", () => {
   });
 
   it("从桌面载入不同账号时不会重绑定旧服务器密码", async () => {
-    saveAppSettings({ ...loadAppSettings(), emby: { serverUrl: "https://original.example.test", pathPrefix: "/emby", username: "owner" } });
+    saveAppSettings({
+      ...loadAppSettings(),
+      emby: {
+        serverUrl: "https://original.example.test",
+        pathPrefix: "/emby",
+        username: "owner"
+      }
+    });
     saveVolatileEmbyPassword("original-private-password");
-    const imported = { ...loadAppSettings(), emby: { serverUrl: "https://other.example.test", pathPrefix: "/emby", username: "owner" } };
+    const imported = {
+      ...loadAppSettings(),
+      emby: { serverUrl: "https://other.example.test", pathPrefix: "/emby", username: "owner" }
+    };
     vi.spyOn(desktopSettings, "readDesktopAppSettings").mockResolvedValue(imported);
     const close = vi.fn();
     render(<SettingsDialog onClose={close} />);
-    await act(async () => { await Promise.resolve(); });
+    await act(async () => {
+      await Promise.resolve();
+    });
     fireEvent.click(screen.getByRole("button", { name: "Emby 连接" }));
     expect(screen.getByLabelText("服务器地址")).toHaveValue(imported.emby.serverUrl);
     expect(screen.getByLabelText("本次会话密码")).toHaveValue("");

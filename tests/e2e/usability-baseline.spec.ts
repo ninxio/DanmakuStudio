@@ -432,7 +432,7 @@ test("易用化阶段 4 在编辑工作区保留常用非破坏性修复", async
   });
   await page.getByTestId("workspace-nav-editing").click();
 
-  await expect(page.getByTestId("preview-panel")).toHaveCount(0);
+  await expect(page.getByTestId("preview-panel")).toContainText("尚未导入参考视频");
   await page.getByRole("button", { name: "偏移与校准" }).click();
   const overview = page.getByTestId("calibration-overview");
   await expect(overview).toBeVisible({ timeout: 30_000 });

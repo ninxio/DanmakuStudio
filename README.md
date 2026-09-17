@@ -26,7 +26,7 @@ Danmaku Studio 是一个本地运行的 Windows 弹幕匹配与编辑工具。�
 ## 能做什么
 
 - **音频匹配**：根据两侧音轨建立时间关系；保留 CPU 和可选 CUDA 声谱计算。
-- **AAP 画面匹配**：比较图像感知哈希，生成分段映射；适用于画面相同、音轨不同或没有音轨的版本。
+- **AAP 画面匹配（实验性）**：尝试通过画面感知哈希生成分段映射。尚未经过实际使用验证，保留为后续 fork 改进的参考实现。
 - **逐段检查**：共同内容、版本差异和不确定区域分别表达，支持预览、边界调整与手动校准。
 - **编辑和导出**：保留原始时间，支持多份 XML、分 P、撤销、保存恢复与 XML/ASS 导出。
 - **可选素材接入**：获取 B 站弹幕和参考音频，或通过 Emby、WebDAV、Motrix 接入素材。
@@ -46,18 +46,18 @@ Studio 比较参考素材与目标视频的声音或画面，找到共同片段�
 | --- | --- |
 | 只有 XML | 素材 → 导入 XML → 编辑 → 导出 |
 | 参考音频/视频、原片和 XML | 素材 → 匹配 → 音频匹配 → 检查 → 导出 |
-| 两侧视频画面相同，但音轨不同 | 素材 → 匹配 → 画面匹配 AAP → 检查 → 导出 |
+| 两侧视频画面相同，但音轨不同 | 可尝试实验性 AAP → 逐段检查和校准 → 导出 |
 
 ### 一次完整操作
 
 1. **准备素材**：XML 是你想迁移的弹幕；参考媒体是它原本对应的版本；原片是你最终要观看的版本。
 2. **导入并配对**：在素材页加入文件，把 XML 绑定到正确的参考素材。分 P 文件逐一确认归属。
-3. **选择匹配方式**：声音接近时用音频匹配；画面接近、配音不同或无音轨时用 AAP。开始后可以停止。
+3. **选择匹配方式**：声音接近时用音频匹配；画面接近、配音不同或无音轨时，可尝试实验性 AAP。开始后可以停止。
 4. **检查和修整**：进入编辑页，检查开头、中间删改点和结尾，处理重复镜头与未匹配区间。必要时手动调整边界和偏移。
 5. **导出并试播**：确认导出范围，保存 XML 或 ASS，再用原片实际播放检查。项目另行保存，便于继续编辑。
 6. **可选上传**：若要从播放器调用私人库，连接 LogVar，核对片名、年份和季集，预览新增/替换清单，再上传并回读核验。[详细步骤](docs/LOGVAR.md)
 
-AAP 需要两侧视频；仅有参考音频时请选择音频匹配。复杂剪辑和重复画面仍可能需要手动修整。
+AAP 需要两侧视频；仅有参考音频时请选择音频匹配。目前 AAP 只做过自动化与合成样本检查，没有经过实际使用测试，不保证真实影片的匹配效果。欢迎后续 fork 在此基础上验证和改进。
 
 ## 下载与运行环境
 
@@ -81,7 +81,7 @@ Windows x64：[下载安装包](https://github.com/ninxio/DanmakuStudio/releases
 | 早期 / 0.1 系列 | 从 XML 解析、时间偏移与 ASS 导出，逐步加入音频对齐、时间线编辑和桌面应用。 |
 | 0.2 系列 | 整理为素材 → 匹配 → 编辑 → 导出的工作台；完善恢复、分集、私人库与本地存储。 |
 | 0.3 | 完善影视资料、季集目录及素材接入流程。 |
-| 0.4 | 加入 AAP 画面匹配，统一为本地匹配流程。 |
+| 0.4 | 尝试加入 AAP 画面匹配，保留实验性实现供后续探索。 |
 | 0.4.1 | 私人库默认接入 LogVar；加入上传预览、限制检查与回读验证，补充双语文档。 |
 
 详见 [更新历史](CHANGELOG.md)。
@@ -99,9 +99,13 @@ corepack pnpm tauri:dev
 
 ## 特别感谢
 
-- [bili-danmaku-mapper](https://github.com/dowdah/bili-danmaku-mapper)：提供了 AAP 画面感知哈希匹配的方向参考。Studio 的分段求解与时间映射为独立实现。
+- [DanDanPlayForAndroid](https://github.com/xyoye/DanDanPlayForAndroid)：为本地视频搭配弹幕的使用流程提供了早期参考。
+- [DanmakuPlayer](https://github.com/Poker-sang/DanmakuPlayer)：为弹幕预览与播放同步提供了产品参考。
+- [danmubox-develop](https://github.com/danmubox/danmubox-develop)：为弹幕导入、管理与导出的功能设计提供了早期参考。
+- [Bilibili-Evolved](https://github.com/the1812/Bilibili-Evolved)：其公开实现为弹幕处理、分 P 时长与素材获取流程的研究提供了参考。
+- [弹弹play开放平台文档](https://doc.dandanplay.com/open/)：为播放器弹幕接口兼容性研究提供了参考。
+- [bili-danmaku-mapper](https://github.com/dowdah/bili-danmaku-mapper)：提供了 AAP 画面感知哈希匹配的思路。Studio 仅做了尝试性实现，尚未经过实际使用测试，留作后续 fork 的探索方向。
 - [LogVar / danmu_api](https://github.com/huangxd-/danmu_api)：提供弹幕聚合、播放器接口与本地弹幕库，成为 Studio 整理结果的可选使用端。
-- [DanmakuBox 贡献者](docs/licenses/DanmakuBox-MIT.txt)：B 站素材获取部分改编自其 MIT 许可代码，完整授权保留在第三方通知中。
 - [FFmpeg](https://ffmpeg.org/) 与 [mpv](https://mpv.io/)：为本地媒体解析、采样、音轨处理和预览提供基础能力，运行组件需用户另行安装。
 - [Tauri](https://tauri.app/)、[React](https://react.dev/)、[Lucide](https://lucide.dev/) 与 [Material Color Utilities](https://github.com/material-foundation/material-color-utilities)：支持桌面外壳、界面、图标及主题配色。
 

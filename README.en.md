@@ -26,7 +26,7 @@ Materials, comment editing and service connections. The application UI is curren
 ## Features
 
 - **Audio alignment:** match common audio with CPU processing and optional CUDA spectral computation.
-- **AAP visual alignment:** compare perceptual frame hashes and build piecewise time mappings, including videos with different soundtracks or no audio.
+- **AAP visual alignment (experimental):** an attempt at piecewise alignment using perceptual frame hashes. It has not been tested in actual use and remains a starting point for future forks.
 - **Review and correction:** inspect common sections, edition differences and uncertain boundaries; preview, adjust and calibrate manually.
 - **Editing and export:** retain original timestamps; work with multiple XML files and video parts; undo, save, restore, and export XML/ASS.
 - **Optional media sources:** acquire accessible Bilibili comments and reference audio, or use Emby, WebDAV and Motrix.
@@ -46,16 +46,16 @@ Comment timestamps are converted through this mapping, allowing different offset
 | --- | --- |
 | XML only | Materials → import XML → edit → export |
 | Reference audio/video, target video and XML | Materials → audio matching → review → export |
-| Similar pictures but different soundtracks | Materials → AAP visual matching → review → export |
+| Similar pictures but different soundtracks | Try experimental AAP → review and calibrate each segment → export |
 
 1. **Prepare:** reference media is the edition the comments originally belong to; target media is the edition you will watch.
 2. **Import:** add files in 素材 (Materials) and associate each XML with the correct reference, especially for multipart uploads.
-3. **Match:** choose audio or AAP in 匹配 (Matching). AAP needs pictures on both sides; an audio download is not a substitute.
+3. **Match:** choose audio matching or try experimental AAP in 匹配 (Matching). AAP needs pictures on both sides; an audio download is not a substitute.
 4. **Review:** check the beginning, edit points and ending in 编辑 (Editing). Resolve repeated shots, unmatched areas and uncertain boundaries.
 5. **Export and play:** confirm the export scope, save XML/ASS and check it with the actual target video. Save your project separately to continue editing later.
 6. **Optional upload:** connect LogVar, check title/year/season/episode, preview additions and replacements, then upload and verify the returned player data.
 
-AAP requires video on both sides. Use audio matching when only reference audio is available. Complex edits and repeated scenes may require manual correction.
+AAP requires video on both sides. Use audio matching when only reference audio is available. AAP has only undergone automated and synthetic-sample checks, not actual-use testing; results on real films are not established. Future forks are welcome to validate and improve it.
 
 ## Download and requirements
 
@@ -79,7 +79,7 @@ This is a capability overview, not an exact release-by-release record.
 | Early / 0.1 series | XML parsing, offsets and ASS export grew into audio alignment, timeline editing and a desktop application. |
 | 0.2 series | Unified workspaces; recovery, episode handling, private library and local storage. |
 | 0.3 | Improved title metadata, season/episode catalogues and media workflows. |
-| 0.4 | Added AAP visual matching and consolidated local alignment workflows. |
+| 0.4 | Introduced an experimental AAP implementation for further exploration. |
 | 0.4.1 | LogVar as the default library integration, upload previews, bounds checks, readback verification and bilingual documentation. |
 
 ## Run from source
@@ -95,9 +95,13 @@ corepack pnpm tauri:dev
 
 ## Thanks
 
-- [bili-danmaku-mapper](https://github.com/dowdah/bili-danmaku-mapper) for the AAP perceptual-hash matching direction. Studio's segment solver and time mapping integration are independent implementations.
+- [DanDanPlayForAndroid](https://github.com/xyoye/DanDanPlayForAndroid) for early workflow inspiration around local video and danmaku.
+- [DanmakuPlayer](https://github.com/Poker-sang/DanmakuPlayer) for product references on comment preview and playback synchronization.
+- [danmubox-develop](https://github.com/danmubox/danmubox-develop) for early references on importing, organizing and exporting comments.
+- [Bilibili-Evolved](https://github.com/the1812/Bilibili-Evolved) for public implementations consulted when researching comments, multipart durations and media acquisition workflows.
+- [dandanplay Open Platform documentation](https://doc.dandanplay.com/open/) for research into player API compatibility.
+- [bili-danmaku-mapper](https://github.com/dowdah/bili-danmaku-mapper) for the AAP perceptual-hash matching idea. Studio's implementation is exploratory, has not been tested in actual use, and is retained as a starting point for future forks.
 - [LogVar / danmu_api](https://github.com/huangxd-/danmu_api) for aggregation, player APIs and a local comment library that can consume Studio's output.
-- [DanmakuBox contributors](docs/licenses/DanmakuBox-MIT.txt) for MIT-licensed code adapted in Bilibili acquisition, with its notice retained.
 - [FFmpeg](https://ffmpeg.org/) and [mpv](https://mpv.io/) for media processing and preview. Runtime components are installed separately.
 - [Tauri](https://tauri.app/), [React](https://react.dev/), [Lucide](https://lucide.dev/) and [Material Color Utilities](https://github.com/material-foundation/material-color-utilities) for the desktop framework, UI, icons and theme colors.
 

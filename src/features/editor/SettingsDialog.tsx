@@ -239,9 +239,11 @@ export function SettingsDialog({ onClose }: SettingsDialogProps) {
             设置中心
           </h2>
           <p className="text-ui-caption text-content-muted">
-            {tab === "bilibili" || tab === "privateLibrary"
-              ? "账号与连接操作立即保存到本机"
-              : "配置保留为草稿，保存后生效"}
+            {tab === "about"
+              ? "应用信息"
+              : tab === "bilibili" || tab === "privateLibrary"
+                ? "账号与连接操作立即保存到本机"
+                : "配置保留为草稿，保存后生效"}
           </p>
         </div>
         <IconButton
@@ -319,20 +321,28 @@ export function SettingsDialog({ onClose }: SettingsDialogProps) {
             {saveError}
           </p>
         ) : null}
-        <div className="flex items-center justify-between gap-3">
-          <TextButton disabled={saving} onClick={restoreDefaults}>
-            恢复默认
-          </TextButton>
-          <div className="flex gap-2">
-            <TextButton disabled={saving} onClick={requestClose}>
-              取消
-            </TextButton>
-            <TextButton tone="primary" disabled={saving} onClick={() => void saveSettings()}>
-              <Save size={14} />
-              {saving ? "正在保存…" : "保存设置并关闭"}
+        {tab === "about" && !dirtyRef.current ? (
+          <div className="flex justify-end">
+            <TextButton tone="primary" onClick={requestClose}>
+              关闭
             </TextButton>
           </div>
-        </div>
+        ) : (
+          <div className="flex items-center justify-between gap-3">
+            <TextButton disabled={saving} onClick={restoreDefaults}>
+              恢复默认
+            </TextButton>
+            <div className="flex gap-2">
+              <TextButton disabled={saving} onClick={requestClose}>
+                取消
+              </TextButton>
+              <TextButton tone="primary" disabled={saving} onClick={() => void saveSettings()}>
+                <Save size={14} />
+                {saving ? "正在保存…" : "保存设置并关闭"}
+              </TextButton>
+            </div>
+          </div>
+        )}
       </footer>
       <input
         ref={settingsInputRef}
@@ -1155,23 +1165,31 @@ function CacheStatusCard({
 
 function AboutSettingsPanel() {
   return (
-    <SettingsSection
-      title="关于"
-      description="Danmaku Timeline Studio 配置保留为草稿，保存后生效。"
-    >
-      <div className="grid gap-2 text-xs text-content-secondary">
-        <InfoRow label="版本" value={APP_VERSION} />
-        <InfoRow
-          label="风格方向"
-          value="Windows 11 / PowerToys 式工具外壳 + 深色专业时间线工作区"
-        />
-        <InfoRow
-          label="当前阶段"
-          value="成熟度提升主线：播放器工具链、音频对齐与项目安全硬化"
-        />
-        <InfoRow label="数据边界" value="用户主动导入的本地文件和用户授权访问的媒体元数据" />
+    <section className="grid gap-6" aria-label="关于 Danmaku Studio">
+      <div className="rounded-dialog bg-primary-container p-6 text-on-primary-container">
+        <img src="/app-icon.svg" width="64" height="64" alt="" />
+        <div className="mt-5 flex flex-wrap items-center gap-3">
+          <h3 className="text-ui-title font-semibold">Danmaku Studio</h3>
+          <span className="rounded-control bg-surface-base px-3 py-1 text-xs text-content-secondary">
+            版本 {APP_VERSION}
+          </span>
+        </div>
+        <p className="mt-3 text-sm leading-6">把不同视频版本的弹幕，带回你真正想看的原片。</p>
       </div>
-    </SettingsSection>
+      <div className="rounded-panel bg-surface-soft p-5">
+        <h4 className="text-sm font-medium text-content-primary">本地弹幕匹配与编辑</h4>
+        <p className="mt-2 text-sm leading-6 text-content-secondary">
+          导入素材、对齐时间、检查修整，再导出 XML 或 ASS。也可以只编辑弹幕，无需视频。
+        </p>
+        <p className="mt-3 text-xs leading-5 text-content-muted">
+          原始文件保持不变，编辑项目可保存后继续处理。
+        </p>
+      </div>
+      <div className="flex flex-wrap items-center justify-between gap-2 border-t border-boundary pt-4 text-xs text-content-muted">
+        <span>为弹幕爱好者制作</span>
+        <span>开源许可 · GPL-3.0-only</span>
+      </div>
+    </section>
   );
 }
 
@@ -1201,15 +1219,6 @@ function InfoBox({ children }: { children: ReactNode }) {
   return (
     <div className="rounded border border-accent-cyan/20 bg-accent-cyan/10 p-3 text-xs leading-5 text-content-secondary">
       {children}
-    </div>
-  );
-}
-
-function InfoRow({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="grid grid-cols-[92px_minmax(0,1fr)] gap-3 border-b border-panel-line py-2 last:border-b-0">
-      <span className="text-content-muted">{label}</span>
-      <span className="text-content-secondary">{value}</span>
     </div>
   );
 }
