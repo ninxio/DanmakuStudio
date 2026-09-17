@@ -20,7 +20,7 @@ EXACT_FILES = {
     'src-tauri/Cargo.toml', 'src-tauri/Cargo.lock', 'src-tauri/build.rs',
     'src-tauri/tauri.conf.json', 'src-tauri/app-icon.svg',
     'docs/USER_GUIDE.md', 'docs/ALGORITHMS.md', 'docs/PRIVACY.md', 'docs/BUILDING.md',
-    'docs/PROMOTION.md', 'docs/LOGVAR.md', 'docs/licenses/DanmakuBox-MIT.txt',
+    'docs/LOGVAR.md', 'docs/licenses/DanmakuBox-MIT.txt',
     'docs/images/workspace.png', 'docs/images/editor.png', 'docs/images/logvar.png',
     'ml/contracts/alignment-multimodal-rule-snapshot-cross-language-vector-v1.json',
     'ml/contracts/alignment-multimodal-blind-review-cross-language-vector-v1.json',

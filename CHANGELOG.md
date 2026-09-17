@@ -1,6 +1,6 @@
 # 版本迭代 / Development history
 
-本页概述能力演进，不公开个人开发日志、素材清单或原始提交历史。早期阶段按系列归纳，不保证每项对应某一个补丁版本。
+以下按版本系列概述主要变化，早期记录为阶段性归纳。
 
 ## 0.4.1 — LogVar 接入与使用文档
 
@@ -8,11 +8,12 @@
 - 凭据独立加密保存；读取列表、选择已有影视、明确新增/替换/只补缺集、串行上传、文件间停止和播放器回读核验。
 - 上传前检查兼容格式、10 MiB / 20 万条上限及已知内容变化；原始 XML 保留本地。
 - 新增中英文 README、合成界面示例、操作步骤、隐私说明及使用端配置指南。
+- 精简首页说明，补充使用与权利联系说明。
 - 旧版专用连接保留兼容入口，不自动迁移。
 
 ## 0.4.0 — 本地 AAP
 
-独立画面感知哈希匹配、无音轨输入、分段时间映射、候选检查与保存恢复；移除 Gemini，完善媒体访问、凭据和网络边界，整理公开源码。
+独立画面感知哈希匹配、无音轨输入、分段时间映射、候选检查与保存恢复；移除 Gemini，改进本地媒体访问和凭据管理。
 
 ## 0.3 — 影视与季集资料
 
@@ -29,7 +30,7 @@
 ## English overview
 
 - **0.4.1:** LogVar connection and uploads, explicit review, limits and readback checks; bilingual documentation and synthetic UI previews.
-- **0.4.0:** local AAP, Gemini removal and privacy-reviewed public source.
+- **0.4.0:** local AAP, Gemini removal and improvements to media access and credential management.
 - **0.3:** title metadata and season/episode workflows.
 - **0.2 series:** unified workspaces, recovery, episode handling and private library updates.
 - **Early / 0.1 series:** XML and ASS utilities evolved into audio alignment and a desktop editor.
