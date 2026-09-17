@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "alignment-multimodal-rule-snapshot-v1",
+  "createdAt": "2026-07-22T18:00:00.000Z",
+  "containsSensitiveMediaDigests": true,
+  "permission": "local-multimodal-shadow-association-only",
+  "releaseEligible": false,
+  "timeMaps": [
+    {
+      "timeMapKey": "sha256:45fa8c1a0871f2ddb352d5aa9f14dc9b44cc4c4d5fe07ea3a0035512a9cb8f74",
+      "sourceContentDigest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "targetContentDigest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "ruleProfileDigest": "sha256:7cd4baddd5f697885a3251b312b35cdf234472ad290a159c22af7802b3f12b90",
+      "engineVersion": "alignment-v2",
+      "featureVersion": "feature-v2",
+      "parametersHash": "sha256:parameters",
+      "spans": [
+        {
+          "kind": "matched",
+          "sourceStartMs": 0,
+          "sourceEndMs": 10000,
+          "targetStartMs": 2000,
+          "targetEndMs": 12000
+        }
+      ]
+    }
+  ],
+  "snapshotId": "sha256:3ccc79f7a7804a814a83b76633b27a753add90e1c2992e09732fd47f3c75867a"
+}

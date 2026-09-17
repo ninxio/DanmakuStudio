@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "alignment-shadow-risk-local-plan-cross-language-vector-v1",
+  "association": {
+    "schemaVersion": "alignment-shadow-risk-association-v1",
+    "projectIdDigest": "sha256:dc181a7f6fcc22a3a355b57ef4eed666dae4c5c11ec66b86991633bb515ccf8d",
+    "featureRecipeVersion": "rule-audio-local-support-risk-v1",
+    "records": [
+      {
+        "recordId": "review:eligible",
+        "recordEvidenceDigest": "sha256:2aff0d9cb7b4fe75f78f6b9d4dcd9f8bb95bfdb755bd4b4006b20ba99c649ea5"
+      },
+      {
+        "recordId": "review:missing-map",
+        "recordEvidenceDigest": "sha256:57f9ad3314379ce0a532f535e6f340a24b125e19dc7569f44121ee0cd54deb90"
+      }
+    ],
+    "permission": "association-only-no-labels",
+    "manifestId": "sha256:1463f564f21294569d63a5c7d63945ba2417a2b625f94148b5fba29eb883331e"
+  },
+  "plan": {
+    "schemaVersion": "alignment-shadow-risk-local-plan-v1",
+    "associationManifestId": "sha256:1463f564f21294569d63a5c7d63945ba2417a2b625f94148b5fba29eb883331e",
+    "projectIdDigest": "sha256:dc181a7f6fcc22a3a355b57ef4eed666dae4c5c11ec66b86991633bb515ccf8d",
+    "featureRecipeVersion": "rule-audio-local-support-risk-v1",
+    "createdAt": "2026-07-22T18:00:00.000Z",
+    "containsSensitiveLocalPaths": true,
+    "permission": "local-offline-shadow-scoring-only",
+    "releaseEligible": false,
+    "media": [
+      {
+        "mediaKey": "sha256:a161019b733c72ac0361ee496b26c7e6e5c833f5434c4fc393d75eb83d7cf1a9",
+        "mediaId": "source-1",
+        "path": "C:\\authorized\\source.wav",
+        "contentDigest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "sizeBytes": 1000,
+        "durationMs": 20000,
+        "audioStreamIndex": 1
+      },
+      {
+        "mediaKey": "sha256:fa247db4d8b892b4a22226808ccbf6305813c008929abab14cb0c524f3d80f72",
+        "mediaId": "target-1",
+        "path": "C:\\authorized\\target.wav",
+        "contentDigest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "sizeBytes": 1000,
+        "durationMs": 20000,
+        "audioStreamIndex": 1
+      }
+    ],
+    "records": [
+      {
+        "recordId": "review:eligible",
+        "recordEvidenceDigest": "sha256:2aff0d9cb7b4fe75f78f6b9d4dcd9f8bb95bfdb755bd4b4006b20ba99c649ea5",
+        "timeMapId": "map-1",
+        "timeMapRevision": 1,
+        "sourceMediaId": "source-1",
+        "targetMediaId": "target-1",
+        "sourceMediaKey": "sha256:a161019b733c72ac0361ee496b26c7e6e5c833f5434c4fc393d75eb83d7cf1a9",
+        "targetMediaKey": "sha256:fa247db4d8b892b4a22226808ccbf6305813c008929abab14cb0c524f3d80f72",
+        "sourceStartMs": 1000,
+        "sourceEndMs": 9000,
+        "targetStartMs": 2000,
+        "targetEndMs": 10000
+      }
+    ],
+    "planId": "sha256:a10fc7a735997ef0872d56b90ab5f5a3a261e4d6c9cc0178d0b3513cc082d424"
+  }
+}

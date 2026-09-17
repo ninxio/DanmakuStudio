@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "frameStepMs": 1000,
+  "cases": [
+    {
+      "id": "no-cut-control",
+      "title": "无删减对照",
+      "frameCount": 160,
+      "cuts": [],
+      "transientMismatches": [],
+      "expectedGapsMs": []
+    },
+    {
+      "id": "single-sustained-cut",
+      "title": "单个持续删减",
+      "frameCount": 160,
+      "cuts": [{ "completeStartFrame": 40, "lengthFrames": 20 }],
+      "transientMismatches": [],
+      "expectedGapsMs": [20000]
+    },
+    {
+      "id": "two-sustained-cuts",
+      "title": "两个持续删减",
+      "frameCount": 220,
+      "cuts": [
+        { "completeStartFrame": 45, "lengthFrames": 12 },
+        { "completeStartFrame": 135, "lengthFrames": 10 }
+      ],
+      "transientMismatches": [],
+      "expectedGapsMs": [12000, 10000]
+    },
+    {
+      "id": "transient-forward-mismatch",
+      "title": "短暂误配不应生成删减",
+      "frameCount": 180,
+      "cuts": [],
+      "transientMismatches": [{ "sourceStartFrame": 60, "lengthFrames": 10, "completeOffsetFrames": 20 }],
+      "expectedGapsMs": []
+    }
+  ]
+}

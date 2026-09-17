@@ -1,0 +1,326 @@
+{
+  "schemaVersion": 8,
+  "id": "demo_three_part_project",
+  "name": "三分P合并示例",
+  "media": null,
+  "mediaLibrary": [],
+  "mediaBinding": null,
+  "seasonEpisodeBindings": [],
+  "danmakuSourceBindings": [],
+  "danmakuSourceSegments": [],
+  "assets": [
+    {
+      "id": "demo_asset_1",
+      "name": "part-1",
+      "fileName": "part-1.xml",
+      "color": "#4cc9f0",
+      "items": [
+        {
+          "id": "demo_asset_1_item_0",
+          "assetId": "demo_asset_1",
+          "originalIndex": 0,
+          "sourceTimeMs": 500,
+          "mode": 1,
+          "fontSize": 25,
+          "color": 16777215,
+          "timestamp": 1700000000,
+          "pool": 0,
+          "userHash": "p1",
+          "rowId": "row1",
+          "text": "P1 开场",
+          "rawPFields": [
+            "0.500",
+            "1",
+            "25",
+            "16777215",
+            "1700000000",
+            "0",
+            "p1",
+            "row1"
+          ],
+          "enabled": true
+        },
+        {
+          "id": "demo_asset_1_item_1",
+          "assetId": "demo_asset_1",
+          "originalIndex": 1,
+          "sourceTimeMs": 12000,
+          "mode": 1,
+          "fontSize": 25,
+          "color": 16777215,
+          "timestamp": 1700000001,
+          "pool": 0,
+          "userHash": "p1",
+          "rowId": "row2",
+          "text": "P1 中段",
+          "rawPFields": [
+            "12.000",
+            "1",
+            "25",
+            "16777215",
+            "1700000001",
+            "0",
+            "p1",
+            "row2"
+          ],
+          "enabled": true
+        },
+        {
+          "id": "demo_asset_1_item_2",
+          "assetId": "demo_asset_1",
+          "originalIndex": 2,
+          "sourceTimeMs": 24000,
+          "mode": 1,
+          "fontSize": 25,
+          "color": 16777215,
+          "timestamp": 1700000002,
+          "pool": 0,
+          "userHash": "p1",
+          "rowId": "row3",
+          "text": "P1 结尾",
+          "rawPFields": [
+            "24.000",
+            "1",
+            "25",
+            "16777215",
+            "1700000002",
+            "0",
+            "p1",
+            "row3"
+          ],
+          "enabled": true
+        }
+      ],
+      "warnings": [],
+      "importedAt": "2026-07-03T00:00:00.000Z"
+    },
+    {
+      "id": "demo_asset_2",
+      "name": "part-2",
+      "fileName": "part-2.xml",
+      "color": "#7bd88f",
+      "items": [
+        {
+          "id": "demo_asset_2_item_0",
+          "assetId": "demo_asset_2",
+          "originalIndex": 0,
+          "sourceTimeMs": 1000,
+          "mode": 1,
+          "fontSize": 25,
+          "color": 65280,
+          "timestamp": 1700000100,
+          "pool": 0,
+          "userHash": "p2",
+          "rowId": "row1",
+          "text": "P2 开场",
+          "rawPFields": [
+            "1.000",
+            "1",
+            "25",
+            "65280",
+            "1700000100",
+            "0",
+            "p2",
+            "row1"
+          ],
+          "enabled": true
+        },
+        {
+          "id": "demo_asset_2_item_1",
+          "assetId": "demo_asset_2",
+          "originalIndex": 1,
+          "sourceTimeMs": 14000,
+          "mode": 5,
+          "fontSize": 28,
+          "color": 65280,
+          "timestamp": 1700000101,
+          "pool": 0,
+          "userHash": "p2",
+          "rowId": "row2",
+          "text": "P2 顶部",
+          "rawPFields": [
+            "14.000",
+            "5",
+            "28",
+            "65280",
+            "1700000101",
+            "0",
+            "p2",
+            "row2"
+          ],
+          "enabled": true
+        },
+        {
+          "id": "demo_asset_2_item_2",
+          "assetId": "demo_asset_2",
+          "originalIndex": 2,
+          "sourceTimeMs": 28000,
+          "mode": 1,
+          "fontSize": 25,
+          "color": 65280,
+          "timestamp": 1700000102,
+          "pool": 0,
+          "userHash": "p2",
+          "rowId": "row3",
+          "text": "P2 结尾",
+          "rawPFields": [
+            "28.000",
+            "1",
+            "25",
+            "65280",
+            "1700000102",
+            "0",
+            "p2",
+            "row3"
+          ],
+          "enabled": true
+        }
+      ],
+      "warnings": [],
+      "importedAt": "2026-07-03T00:00:00.000Z"
+    },
+    {
+      "id": "demo_asset_3",
+      "name": "part-3",
+      "fileName": "part-3.xml",
+      "color": "#f2c94c",
+      "items": [
+        {
+          "id": "demo_asset_3_item_0",
+          "assetId": "demo_asset_3",
+          "originalIndex": 0,
+          "sourceTimeMs": 2000,
+          "mode": 1,
+          "fontSize": 25,
+          "color": 255,
+          "timestamp": 1700000200,
+          "pool": 0,
+          "userHash": "p3",
+          "rowId": "row1",
+          "text": "P3 开场",
+          "rawPFields": [
+            "2.000",
+            "1",
+            "25",
+            "255",
+            "1700000200",
+            "0",
+            "p3",
+            "row1"
+          ],
+          "enabled": true
+        },
+        {
+          "id": "demo_asset_3_item_1",
+          "assetId": "demo_asset_3",
+          "originalIndex": 1,
+          "sourceTimeMs": 16000,
+          "mode": 4,
+          "fontSize": 28,
+          "color": 255,
+          "timestamp": 1700000201,
+          "pool": 0,
+          "userHash": "p3",
+          "rowId": "row2",
+          "text": "P3 底部",
+          "rawPFields": [
+            "16.000",
+            "4",
+            "28",
+            "255",
+            "1700000201",
+            "0",
+            "p3",
+            "row2"
+          ],
+          "enabled": true
+        },
+        {
+          "id": "demo_asset_3_item_2",
+          "assetId": "demo_asset_3",
+          "originalIndex": 2,
+          "sourceTimeMs": 32000,
+          "mode": 1,
+          "fontSize": 25,
+          "color": 255,
+          "timestamp": 1700000202,
+          "pool": 0,
+          "userHash": "p3",
+          "rowId": "row3",
+          "text": "P3 结尾",
+          "rawPFields": [
+            "32.000",
+            "1",
+            "25",
+            "255",
+            "1700000202",
+            "0",
+            "p3",
+            "row3"
+          ],
+          "enabled": true
+        }
+      ],
+      "warnings": [],
+      "importedAt": "2026-07-03T00:00:00.000Z"
+    }
+  ],
+  "clips": [
+    {
+      "id": "demo_clip_1",
+      "assetId": "demo_asset_1",
+      "name": "part-1 时间轴片段",
+      "timelineStartMs": 0,
+      "sourceInMs": 0,
+      "sourceOutMs": 24001,
+      "localOffsetMs": 0,
+      "enabled": true
+    },
+    {
+      "id": "demo_clip_2",
+      "assetId": "demo_asset_2",
+      "name": "part-2 时间轴片段",
+      "timelineStartMs": 24001,
+      "sourceInMs": 0,
+      "sourceOutMs": 28001,
+      "localOffsetMs": 0,
+      "enabled": true
+    },
+    {
+      "id": "demo_clip_3",
+      "assetId": "demo_asset_3",
+      "name": "part-3 时间轴片段",
+      "timelineStartMs": 52002,
+      "sourceInMs": 0,
+      "sourceOutMs": 32001,
+      "localOffsetMs": 0,
+      "enabled": true
+    }
+  ],
+  "globalOffsetMs": 0,
+  "cutMarkers": [
+    {
+      "id": "demo_cut_1",
+      "name": "示例删减点",
+      "sourceAtMs": 30000,
+      "targetGapMs": 45000,
+      "note": "示例：完整版在此处额外存在 45 秒内容。"
+    }
+  ],
+  "syncAnchors": [],
+  "alignmentProposal": null,
+  "itemTimeAdjustments": {},
+  "disabledItemIds": [],
+  "timeline": {
+    "pixelsPerSecond": 90,
+    "scrollMs": 0,
+    "playheadMs": 0
+  },
+  "preview": {
+    "danmakuVisible": true,
+    "safeAreaVisible": false,
+    "opacity": 0.88
+  },
+  "createdAt": "2026-07-03T00:00:00.000Z",
+  "updatedAt": "2026-07-03T00:00:00.000Z"
+}

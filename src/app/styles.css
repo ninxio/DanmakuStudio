@@ -1,0 +1,99 @@
+@import "./styles/theme.css";
+@import "./styles/controls.css";
+@import "./styles/workspace.css";
+@import "./styles/workspace-kit.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, "Segoe UI", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
+  background: rgb(var(--color-surface-canvas));
+  color: rgb(var(--color-content-secondary));
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 360px;
+  min-height: 320px;
+  overflow: hidden;
+  background: rgb(var(--color-surface-canvas));
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.thin-scrollbar {
+  scrollbar-color: rgb(var(--color-boundary-strong)) rgb(var(--color-surface-base));
+  scrollbar-width: thin;
+}
+
+.timeline-canvas {
+  image-rendering: auto;
+}
+
+.danmaku-preview-text {
+  text-shadow:
+    0 1px 2px rgb(0 0 0),
+    0 0 2px rgb(0 0 0);
+}
+
+.performance-list-item {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 9rem;
+}
+
+.app-shell {
+  --workspace-gutter: var(--workspace-gutter-standard);
+  background: rgb(var(--color-surface-canvas));
+}
+
+.app-shell[data-density="compact"] {
+  --workspace-gutter: var(--workspace-gutter-compact);
+  font-size: 0.875rem;
+}
+
+.app-workspace-gutter {
+  padding: var(--workspace-gutter);
+}
+
+@media (max-width: 1280px), (max-height: 720px) {
+  .app-shell {
+    --workspace-gutter: var(--workspace-gutter-compact);
+    font-size: 0.9375rem;
+  }
+}
+
+:root[data-reduce-motion="true"] *,
+:root[data-reduce-motion="true"] *::before,
+:root[data-reduce-motion="true"] *::after,
+.app-shell.reduce-motion *,
+.app-shell.reduce-motion *::before,
+.app-shell.reduce-motion *::after {
+  scroll-behavior: auto !important;
+  transition-duration: 0.01ms !important;
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

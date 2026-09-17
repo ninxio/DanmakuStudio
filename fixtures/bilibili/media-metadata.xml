@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<i xmlns:dbx="urn:danmakubox:xml:metadata:1">
+  <dbx:meta schema-version="1" source="bilibili" bvid="BV1xx411c7mD" aid="170001" cid="123" page-index="1" page-count="8" title="示例 &amp; 剧集" part="第一集片段" duration-ms="280123" duration-source="playurl.timelength" duration-source-unit="millisecond" exact-duration="true">
+    <dbx:audio included="true" file="reference.m4a" container="m4a" codec="mp4a.40.2" bandwidth="192000" />
+  </dbx:meta>
+  <d p="1.25,1,25,16777215,0,0,u,1">正文</d>
+</i>

@@ -1,0 +1,99 @@
+/* Generated from src/design/theme.json by pnpm theme:generate. Do not edit palette values here. */
+:root {
+  --color-surface-canvas: 248 245 253;
+  --color-surface-base: 255 255 255;
+  --color-surface-raised: 245 242 250;
+  --color-surface-inset: 251 248 255;
+  --color-surface-soft: 239 237 244;
+  --color-boundary-default: 222 220 227;
+  --color-boundary-strong: 118 118 128;
+  --color-content-primary: 27 27 33;
+  --color-content-secondary: 69 70 79;
+  --color-content-muted: 94 94 100;
+  --color-content-subtle: 99 99 105;
+  --color-primary: 80 91 146;
+  --color-on-primary: 255 255 255;
+  --color-primary-container: 221 225 255;
+  --color-on-primary-container: 56 67 121;
+  --color-feedback-running: 80 91 146;
+  --color-feedback-success: 0 103 64;
+  --color-feedback-warning: 128 78 0;
+  --color-feedback-danger: 186 26 26;
+  --color-timeline-track-alternate: 242 240 247;
+  --color-timeline-label: 94 94 100;
+  --color-timeline-guide: 193 192 199;
+  --color-timeline-axis-text: 69 70 79;
+  --color-timeline-bright: 80 91 146;
+  --color-timeline-video: 223 225 249;
+  --color-timeline-video-text: 66 70 89;
+  --color-timeline-clip-outline: 59 59 65;
+  --color-timeline-clip-text: 23 23 29;
+  --color-timeline-correction: 128 78 0;
+  --color-timeline-correction-text: 103 61 0;
+  --color-timeline-danger-panel: 255 218 214;
+  --color-timeline-danger-outline: 186 26 26;
+  --color-timeline-danger-text: 147 0 10;
+  --color-evidence-supported: 0 103 64;
+  --color-evidence-source-only: 152 97 0;
+  --color-evidence-target-only: 0 114 135;
+  --color-evidence-cut: 154 96 8;
+  --color-evidence-replacement: 144 87 158;
+  --color-evidence-recovered: 80 91 146;
+  --color-scrim: 16 17 22;
+  --color-focus-ring: 80 91 146;
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --color-surface-canvas: 18 19 24;
+  --color-surface-base: 27 27 33;
+  --color-surface-raised: 39 39 45;
+  --color-surface-inset: 23 23 29;
+  --color-surface-soft: 48 48 54;
+  --color-boundary-default: 59 59 65;
+  --color-boundary-strong: 144 144 154;
+  --color-content-primary: 227 225 233;
+  --color-content-secondary: 198 197 208;
+  --color-content-muted: 180 178 186;
+  --color-content-subtle: 166 165 172;
+  --color-primary: 185 195 255;
+  --color-on-primary: 33 44 97;
+  --color-primary-container: 56 67 121;
+  --color-on-primary-container: 221 225 255;
+  --color-feedback-running: 185 195 255;
+  --color-feedback-success: 126 217 166;
+  --color-feedback-warning: 255 184 101;
+  --color-feedback-danger: 255 180 171;
+  --color-timeline-track-alternate: 33 33 39;
+  --color-timeline-label: 180 178 186;
+  --color-timeline-guide: 84 84 90;
+  --color-timeline-axis-text: 198 197 208;
+  --color-timeline-bright: 185 195 255;
+  --color-timeline-video: 66 70 89;
+  --color-timeline-video-text: 223 225 249;
+  --color-timeline-clip-outline: 18 19 24;
+  --color-timeline-clip-text: 23 23 29;
+  --color-timeline-correction: 255 184 101;
+  --color-timeline-correction-text: 255 203 146;
+  --color-timeline-danger-panel: 147 0 10;
+  --color-timeline-danger-outline: 255 180 171;
+  --color-timeline-danger-text: 255 218 214;
+  --color-evidence-supported: 126 217 166;
+  --color-evidence-source-only: 250 179 81;
+  --color-evidence-target-only: 114 206 230;
+  --color-evidence-cut: 245 173 85;
+  --color-evidence-replacement: 235 170 248;
+  --color-evidence-recovered: 185 195 255;
+  --color-scrim: 16 17 22;
+  --color-focus-ring: 185 195 255;
+  color-scheme: dark;
+}
+
+:root {
+  --motion-fast: 120ms;
+  --motion-standard: 180ms;
+  --motion-enter: 220ms;
+  --motion-easing: cubic-bezier(0.2, 0, 0, 1);
+  --workspace-gutter-standard: 1.5rem;
+  --workspace-gutter-compact: 1rem;
+}
