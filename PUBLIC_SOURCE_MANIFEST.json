@@ -13,8 +13,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "3fba87d5afe30cb534337cef75a6a5ab3982412921ba3623328d26fce88cc2cc",
-      "bytes": 2033
+      "sha256": "0d42d35fa7ac9fb360c3aefc2e088b423c4f856ed5778571688f8e87b4fda218",
+      "bytes": 1996
     },
     {
       "path": "LICENSE",
@@ -23,18 +23,18 @@
     },
     {
       "path": "README.en.md",
-      "sha256": "bf9269fb5d9aaf87518142b1dee8f768815a8c60fba1521da2690a04f7c6a6be",
-      "bytes": 8537
+      "sha256": "f86162a125e794e5053980f842ea8aac89e25555545ffdbf82ebdae4db664558",
+      "bytes": 8026
     },
     {
       "path": "README.md",
-      "sha256": "68ac3d270af6b9515013636f6d0036f41bb4512697a865030416fdb5e643ff70",
-      "bytes": 8645
+      "sha256": "e18a52b727f60a16345cf88be969ebcbade6bda24fde00773ab56bd8edbd8562",
+      "bytes": 7739
     },
     {
       "path": "RELEASE_NOTES.md",
-      "sha256": "9d6f627302c781d9a789cea9249f3d61103d3d22747198349c44101581ed3039",
-      "bytes": 3583
+      "sha256": "82eff9379ed597fe4553a64064eb799dc43e5c5a49f12cfb1b7e9f895c876c93",
+      "bytes": 3419
     },
     {
       "path": "SECURITY.md",
@@ -63,13 +63,8 @@
     },
     {
       "path": "docs/PRIVACY.md",
-      "sha256": "be5c73b8ae77dacaefd836eabfbb6c4f6e21730bf45f9108008758317d932503",
-      "bytes": 2626
-    },
-    {
-      "path": "docs/PROMOTION.md",
-      "sha256": "924661d74b016e7594326007ea62991b1dcb5235f8854622c489c304cbb7a9ae",
-      "bytes": 1219
+      "sha256": "93df26faaa593e6eeb20eb50f0fa236fa80d269f50277503862121e1f5ff5f6e",
+      "bytes": 2400
     },
     {
       "path": "docs/USER_GUIDE.md",
@@ -323,8 +318,8 @@
     },
     {
       "path": "scripts/prepare-public-source.py",
-      "sha256": "fe5f6d073ef4048e1653a67115d22f3265eb0fa91216e08afd1fc93c1d9aae55",
-      "bytes": 4272
+      "sha256": "78a9e61d68c1af1a6d3713c8b989743d363c530d9eb4f19a6bc2c086116cf2f9",
+      "bytes": 4251
     },
     {
       "path": "scripts/run-synthetic-alignment.ts",

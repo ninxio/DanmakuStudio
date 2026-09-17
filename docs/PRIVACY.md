@@ -12,9 +12,9 @@ Windows 上的 B 站、WebDAV、LogVar 和旧专用库凭据使用系统 DPAPI �
 
 ## 首次安装与升级
 
-安装包包含程序和许可文件，不打包开发者的应用数据目录。没有旧数据时，B 站为未登录状态，LogVar 与旧专用库均未配置，地址为空。配置文件在当前用户的 `%APPDATA%/studio.danmaku.timeline` 下；项目库与凭据默认位于该用户的 `%LOCALAPPDATA%/studio.danmaku.timeline` 下。自定义存储目录留空时自动采用当前用户的默认目录，默认导出到数据目录下的 `exports`。
+配置文件在当前用户的 `%APPDATA%/studio.danmaku.timeline` 下；项目库与凭据默认位于该用户的 `%LOCALAPPDATA%/studio.danmaku.timeline` 下。自定义存储目录留空时采用当前用户的默认目录，默认导出到数据目录下的 `exports`。B 站账号与私人库连接由用户按需配置。
 
-同一 Windows 用户升级会恢复该用户以前保存的路径、账号与连接，不会因为重装就换成陌生账号。这不表示配置被写入安装包。若自行导入设置备份、复制应用数据或共享 Windows 账号，也会影响看到的内容。
+升级会保留当前 Windows 用户已有的路径、账号与连接。导入设置备份、复制应用数据或共享 Windows 账号时，请留意这些数据的使用范围。
 
 B 站凭据保存在 `bilibili/credential.dpapi`；LogVar 与旧专用库分别保存在 `logvar-library/connection.dpapi`、`private-library/connection.dpapi`。LogVar 不复用旧服务凭据。界面只回显不带 TOKEN 的服务根地址，复制播放器地址是用户主动操作，复制结果包含 TOKEN，需妥善保管。
 

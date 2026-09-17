@@ -10,7 +10,7 @@ Danmaku Studio is a local Windows tool for aligning and editing timed video comm
 
 ## Preview
 
-Real interface, authored sample comments, no saved accounts or private media. These screenshots demonstrate the UI, not alignment accuracy. The application UI is currently in Simplified Chinese; this English README does not imply an English UI.
+Materials, comment editing and service connections. The application UI is currently in Simplified Chinese.
 
 ![Materials workspace](docs/images/workspace.png)
 
@@ -32,15 +32,13 @@ Real interface, authored sample comments, no saved accounts or private media. Th
 - **Optional media sources:** acquire accessible Bilibili comments and reference audio, or use Emby, WebDAV and Motrix.
 - **Optional private library:** connect your own [LogVar / danmu_api](https://github.com/huangxd-/danmu_api) service and upload reviewed comments for compatible players.
 
-Original XML and media are not overwritten. Alignment runs on your computer. No OpenAI, Gemini or other cloud model API is required. An API server is optional for the main editing workflow.
+Editing preserves the original XML and media. Alignment runs locally without cloud models.
 
 ## How it works
 
-A comment XML file is a list of messages and the time when each should appear. The challenge is that 90 seconds in the reference edition may correspond to a different point in your viewing edition.
+Studio compares the reference and target media to find common sections and build a piecewise time mapping. Audio alignment matches shared sound; AAP compares perceptual frame hashes to find corresponding sequences.
 
-Studio finds common sound or images, then builds a time conversion table for each matching section. An extra 12-second intro needs a different offset; another cut halfway through changes the offset again. A single adjustment for the whole video would not be enough.
-
-Audio alignment listens for the same passage. AAP gives sampled images compact visual fingerprints and looks for consistent sequences. Studio uses the resulting map to move comments. Sections without reliable evidence stay available for review instead of being assigned to an arbitrary nearby frame.
+Comment timestamps are converted through this mapping, allowing different offsets around introductions, cuts and inserted sections. Repeated shots, unmatched regions and uncertain boundaries need review or manual calibration. See [algorithm details (Chinese)](docs/ALGORITHMS.md).
 
 ## Start with your files
 
@@ -57,22 +55,20 @@ Audio alignment listens for the same passage. AAP gives sampled images compact v
 5. **Export and play:** confirm the export scope, save XML/ASS and check it with the actual target video. Save your project separately to continue editing later.
 6. **Optional upload:** connect LogVar, check title/year/season/episode, preview additions and replacements, then upload and verify the returned player data.
 
-AAP candidates currently require review. A 250 ms sampling interval is not a guarantee of 250 ms accuracy on arbitrary media. Severe crops, redraws, repeated scenes and reordered shots can require manual work. See [algorithm details (Chinese)](docs/ALGORITHMS.md).
+AAP requires video on both sides. Use audio matching when only reference audio is available. Complex edits and repeated scenes may require manual correction.
 
-Studio is not a general aggregation API. If an existing API already gives your player suitable comments, you may not need it. Bilibili acquisition handles comments and reference audio from accessible posts; it cannot recover removed videos and is not a full video archiving tool.
+## Download and requirements
 
-## Download and first launch
-
-Download the **Windows x64 setup executable** from [Releases](https://github.com/ninxio/DanmakuStudio/releases). GitHub's automatic “Source code” downloads are not installers.
+Windows x64: [Download the installer](https://github.com/ninxio/DanmakuStudio/releases).
 
 - XML-only editing needs no external media tools.
 - Matching needs FFmpeg and FFprobe; configure them in 设置 → 播放器与工具 (Settings → Player & tools).
 - In-app MKV/HEVC preview needs a compatible x64 libmpv DLL.
 - FFmpeg, libmpv and videos are not bundled. Windows needs WebView2. Use media you have permission to process.
 
-**New users do not inherit the developer's configuration.** Bilibili starts signed out; API connections and addresses start empty. Data directories belong to the current Windows user. Sign into your own account and configure your own service if needed. Upgrades retain configuration already saved on that computer.
+The optional private library works with your own [LogVar / danmu_api](https://github.com/huangxd-/danmu_api) deployment. See the [setup guide](docs/LOGVAR.md#english-quick-start) for address formats and upload permissions. Local editing, alignment and export do not require an API server.
 
-For the optional library, deploy [huangxd-/danmu_api](https://github.com/huangxd-/danmu_api). Studio accepts `https://your-service/TOKEN` or `https://your-service/TOKEN/api/v2`; uploads normally also require `ADMIN_TOKEN`. Existing legacy service connections remain separately available without automatic credential or content migration. [Setup and limits](docs/LOGVAR.md#english-quick-start).
+[User guide (Chinese)](docs/USER_GUIDE.md) · [Local data and privacy (Chinese)](docs/PRIVACY.md)
 
 ## Development history
 
@@ -83,7 +79,7 @@ This is a capability overview, not an exact release-by-release record.
 | Early / 0.1 series | XML parsing, offsets and ASS export grew into audio alignment, timeline editing and a desktop application. |
 | 0.2 series | Unified workspaces; recovery, episode handling, private library and local storage. |
 | 0.3 | Improved title metadata, season/episode catalogues and media workflows. |
-| 0.4 | Added local AAP visual matching, removed Gemini and prepared privacy-reviewed public source. |
+| 0.4 | Added AAP visual matching and consolidated local alignment workflows. |
 | 0.4.1 | LogVar as the default library integration, upload previews, bounds checks, readback verification and bilingual documentation. |
 
 ## Run from source
@@ -110,5 +106,11 @@ corepack pnpm tauri:dev
 Report reproducible steps, synthetic samples and incorrect timestamps without private data. Explain how the two editions differ. Do not share account credentials, authorized playback URLs or media you cannot redistribute. Project backups contain local media paths; review them before sharing.
 
 This is an early personal project serving a niche need. It currently meets my own needs, and further version updates are unlikely.
+
+## Use and rights
+
+This project was created for personal learning and interest, and its source is released under an open-source license. It is not affiliated with or officially endorsed by the third-party platforms it interacts with. Use third-party content and services in accordance with applicable laws, platform rules and the permissions required.
+
+If you believe any code, documentation or example in this repository infringes your rights, please contact the maintainer through an [issue](https://github.com/ninxio/DanmakuStudio/issues), identifying the material and the basis of your claim. Reports will be reviewed promptly, and substantiated concerns will be addressed through removal, takedown or other appropriate action. Do not include identity documents, account credentials or other sensitive information in public reports.
 
 Licensed under [GPL-3.0-only](LICENSE). See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for dependency notices.
