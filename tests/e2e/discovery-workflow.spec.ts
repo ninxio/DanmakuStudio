@@ -60,6 +60,8 @@ test("discovery persists portable profile, explicitly prefills acquisition and f
   await xml;
   await installLibraryBridge(page);
   await page.getByRole("button", { name: "发布到私人弹幕库", exact: true }).click();
+  await page.getByText("已有旧版专用服务", { exact: true }).click();
+  await page.getByRole("button", { name: "打开旧版专用库" }).click();
   const publish = page.getByRole("dialog", { name: "更新私人弹幕库" });
   await publish.getByRole("button", { name: "库里没有，新增影视" }).click();
   await expect(publish.getByLabel("正式片名")).toHaveValue("测试作品");

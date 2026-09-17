@@ -1,6 +1,6 @@
 [package]
 name = "danmaku_timeline_studio"
-version = "0.4.0"
+version = "0.4.1"
 description = "Danmaku Timeline Studio desktop shell"
 authors = ["Danmaku Timeline Studio Contributors"]
 license = "GPL-3.0-only"
@@ -17,7 +17,7 @@ tauri-build = { version = "2", features = [] }
 [dependencies]
 tauri = { version = "2", features = [] }
 tauri-plugin-dialog = "2.7.1"
-reqwest = { version = "0.12", default-features = false, features = ["brotli", "deflate", "gzip", "json", "rustls-tls", "stream", "zstd"] }
+reqwest = { version = "0.12", default-features = false, features = ["brotli", "deflate", "gzip", "json", "multipart", "rustls-tls", "stream", "zstd"] }
 prost = "0.13"
 futures-util = "0.3"
 flate2 = "1"
@@ -32,6 +32,7 @@ rusqlite = { version = "0.40.2", default-features = false, features = ["bundled"
 ring = "0.17"
 quick-xml = "0.41"
 percent-encoding = "2"
+unicode-normalization = "0.1"
 cookie = "0.18.1"
 qrcode = { version = "0.14.1", default-features = false, features = ["svg"] }
 rsa = "0.9.8"

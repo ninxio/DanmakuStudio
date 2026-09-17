@@ -10,7 +10,7 @@ from pathlib import Path
 import subprocess
 
 ROOT_FILES = {
-    '.gitignore', '.prettierrc', 'README.md', 'LICENSE', 'THIRD_PARTY_NOTICES.md',
+    '.gitignore', '.prettierrc', 'README.md', 'README.en.md', 'CHANGELOG.md', 'LICENSE', 'THIRD_PARTY_NOTICES.md',
     'SECURITY.md', 'RELEASE_NOTES.md', 'package.json', 'pnpm-lock.yaml', 'index.html', 'eslint.config.js',
     'postcss.config.js', 'tailwind.config.js', 'tsconfig.json', 'tsconfig.app.json',
     'tsconfig.node.json', 'vite.config.ts', 'vitest.config.ts', 'playwright.config.ts',
@@ -20,7 +20,8 @@ EXACT_FILES = {
     'src-tauri/Cargo.toml', 'src-tauri/Cargo.lock', 'src-tauri/build.rs',
     'src-tauri/tauri.conf.json', 'src-tauri/app-icon.svg',
     'docs/USER_GUIDE.md', 'docs/ALGORITHMS.md', 'docs/PRIVACY.md', 'docs/BUILDING.md',
-    'docs/PROMOTION.md', 'docs/licenses/DanmakuBox-MIT.txt',
+    'docs/PROMOTION.md', 'docs/LOGVAR.md', 'docs/licenses/DanmakuBox-MIT.txt',
+    'docs/images/workspace.png', 'docs/images/editor.png', 'docs/images/logvar.png',
     'ml/contracts/alignment-multimodal-rule-snapshot-cross-language-vector-v1.json',
     'ml/contracts/alignment-multimodal-blind-review-cross-language-vector-v1.json',
     'ml/contracts/alignment-shadow-risk-cross-language-vector-v1.json',

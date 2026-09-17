@@ -19,7 +19,7 @@ import {
   saveWorkflowPreset
 } from "../../application/workflowPresets";
 import { loadAppSettings } from "../../infrastructure/settings/appSettings";
-import { PublicationLibraryDialog } from "../export/PublicationLibraryDialog";
+import { LogVarLibraryDialog } from "../export/LogVarLibraryDialog";
 
 /** Mounted owner retains form drafts while the tool sheet is closed. */
 export function DiscoveryWorkbench({
@@ -383,7 +383,7 @@ export function DiscoveryWorkbench({
         </div>
       </ToolSheet>
       {cloud && (
-        <PublicationLibraryDialog
+        <LogVarLibraryDialog
           onClose={() => setCloud(false)}
           onChooseProfile={(chosen) =>
             run(() => {

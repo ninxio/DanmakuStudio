@@ -9,8 +9,7 @@ import {
   restorePublicationDelivery,
   readPublicationPersistence
 } from "../../application/publicationDelivery";
-import { PrivateLibraryPublishDialog } from "./PrivateLibraryPublishDialog";
-import { PublicationLibraryDialog } from "./PublicationLibraryDialog";
+import { LogVarLibraryDialog } from "./LogVarLibraryDialog";
 import { TextButton } from "../../components/TextButton";
 import { WorkspaceStatePanel } from "../../components/WorkspaceStatePanel";
 import { createProjectHealthSummary } from "../../domain/project/health";
@@ -116,12 +115,9 @@ function ExportWorkspaceSession() {
         />
       </div>
       {publishOpen && currentDelivery ? (
-        <PrivateLibraryPublishDialog
-          delivery={currentDelivery}
-          onClose={() => setPublishOpen(false)}
-        />
+        <LogVarLibraryDialog delivery={currentDelivery} onClose={() => setPublishOpen(false)} />
       ) : null}
-      {libraryOpen && <PublicationLibraryDialog onClose={() => setLibraryOpen(false)} />}
+      {libraryOpen && <LogVarLibraryDialog onClose={() => setLibraryOpen(false)} />}
       {compatibilityLoaded ? (
         <Suspense
           fallback={
