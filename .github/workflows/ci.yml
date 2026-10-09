@@ -1,0 +1,126 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  web:
+    name: Lint, typecheck and unit tests
+    # The app ships for Windows x64 only; run the suite on the supported platform.
+    runs-on: windows-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - name: Enable corepack (pnpm version from package.json)
+        shell: bash
+        run: |
+          corepack enable
+          corepack pnpm --version
+
+      - name: Locate pnpm store
+        id: pnpm-store
+        shell: bash
+        run: echo "path=$(corepack pnpm store path --silent)" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/cache@v6
+        with:
+          path: ${{ steps.pnpm-store.outputs.path }}
+          key: pnpm-store-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: pnpm-store-${{ runner.os }}-
+
+      - name: Install dependencies
+        run: corepack pnpm install --frozen-lockfile
+
+      - name: Lint
+        run: corepack pnpm lint
+
+      - name: Typecheck
+        run: corepack pnpm exec tsc -b
+
+      # The C137 17x17 benchmark is CPU-bound with a fixed 120 s budget; it runs on its own
+      # in the "heavy-tests" job so it does not compete with the rest of the suite.
+      - name: Unit tests (vitest)
+        run: corepack pnpm run test --exclude src/infrastructure/alignment/c137BlindBatchBenchmark.test.ts
+
+  heavy-tests:
+    name: CPU-bound benchmark tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - name: Enable corepack (pnpm version from package.json)
+        run: corepack enable
+
+      - name: Locate pnpm store
+        id: pnpm-store
+        run: echo "path=$(corepack pnpm store path --silent)" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/cache@v6
+        with:
+          path: ${{ steps.pnpm-store.outputs.path }}
+          key: pnpm-store-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: pnpm-store-${{ runner.os }}-
+
+      - name: Install dependencies
+        run: corepack pnpm install --frozen-lockfile
+
+      - name: C137 blind batch benchmark (isolated)
+        run: corepack pnpm exec vitest run src/infrastructure/alignment/c137BlindBatchBenchmark.test.ts
+
+  rust:
+    name: Rust tests (src-tauri)
+    runs-on: windows-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Show Rust toolchain
+        run: |
+          rustc --version
+          cargo --version
+
+      - uses: Swatinem/rust-cache@6323deb102c322ba6fcbdcafc7e3dddab59af2b6 # v2.9.2
+        with:
+          workspaces: src-tauri -> target
+
+      - name: cargo test
+        working-directory: src-tauri
+        env:
+          # The runner's default TEMP is an 8.3 short path (C:\Users\RUNNER~1\...), which breaks
+          # tests that compare canonicalized paths. Use the long-form runner temp directory.
+          TEMP: ${{ runner.temp }}
+          TMP: ${{ runner.temp }}
+        # FFmpeg is not installed on the runner. Most FFmpeg integration tests skip themselves when
+        # it is missing; these two build fixtures with ffmpeg unconditionally, so they are skipped
+        # here and remain part of the local `cargo test` run on a machine with FFmpeg.
+        run: >-
+          cargo test --locked --
+          --skip webdav::tests::range_to_flac_receipt_import_preserves_leading_silence_and_shifted_origin
+          --skip webdav::tests::weak_server_uses_single_get_local_source_and_rejects_modified_input

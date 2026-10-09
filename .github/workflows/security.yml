@@ -1,0 +1,126 @@
+name: Security
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    # Weekly, Monday 03:23 UTC. New advisories surface even when the code does not change.
+    - cron: "23 3 * * 1"
+  workflow_dispatch:
+
+# Deny by default; each job requests only what it needs.
+# GitHub-owned actions use major tags; third-party actions are pinned to full commit SHAs
+# (Dependabot keeps the SHA and version comment up to date).
+permissions: {}
+
+concurrency:
+  group: security-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  codeql:
+    name: CodeQL (${{ matrix.language }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: read
+      actions: read
+      security-events: write
+    strategy:
+      fail-fast: false
+      matrix:
+        # All three languages are analysed from source without a build (build-mode: none).
+        language: [javascript-typescript, rust, actions]
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - uses: github/codeql-action/init@v4
+        with:
+          languages: ${{ matrix.language }}
+          build-mode: none
+          queries: security-extended
+
+      - uses: github/codeql-action/analyze@v4
+        with:
+          category: /language:${{ matrix.language }}
+
+  npm-audit:
+    name: pnpm audit (production dependencies)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - name: Enable corepack
+        run: corepack enable
+
+      # Fails on high or critical advisories in runtime dependencies shipped in the app.
+      # Dev-only tooling is covered by the OSV-Scanner job below.
+      - name: pnpm audit --prod
+        run: corepack pnpm audit --prod --audit-level high
+
+  cargo-audit:
+    name: cargo audit (RustSec)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - uses: taiki-e/install-action@f7e5d7c961414b23f5b25b2da9294395d08513ad # v2.87.26
+        with:
+          tool: cargo-audit
+
+      # Reviewed exceptions live in src-tauri/.cargo/audit.toml with their justification.
+      - name: cargo audit
+        working-directory: src-tauri
+        run: cargo audit
+
+  osv-scanner:
+    name: OSV-Scanner
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+    uses: google/osv-scanner-action/.github/workflows/osv-scanner-reusable.yml@a345acffa64b0eaede81a3d9aae6141214d9c8fc # v2.6.0
+    with:
+      # Reviewed exceptions (with expiry dates) live in osv-scanner.toml.
+      scan-args: |-
+        --config=./osv-scanner.toml
+        -r
+        ./
+
+  sbom:
+    name: CycloneDX SBOM
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - uses: anchore/sbom-action@66cbf4bc1f1c0d2edc94016e65bc221b6bb0ad6c # v0.24.3
+        with:
+          path: .
+          format: cyclonedx-json
+          output-file: danmaku-studio.cdx.json
+          artifact-name: danmaku-studio-sbom.cdx.json
+          dependency-snapshot: false
+          upload-release-assets: false

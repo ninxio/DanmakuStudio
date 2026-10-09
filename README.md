@@ -1,5 +1,7 @@
 # Danmaku Studio
 
+[![CI](https://github.com/ninxio/DanmakuStudio/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/ninxio/DanmakuStudio/actions/workflows/ci.yml) [![Security](https://github.com/ninxio/DanmakuStudio/actions/workflows/security.yml/badge.svg?branch=main)](https://github.com/ninxio/DanmakuStudio/actions/workflows/security.yml)
+
 **简体中文** · [English](README.en.md)
 
 把不同视频版本的弹幕，带回你真正想看的原片。
