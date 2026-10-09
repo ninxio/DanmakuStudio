@@ -30,7 +30,7 @@ getrandom = "0.4"
 sha2 = "0.10"
 rusqlite = { version = "0.40.2", default-features = false, features = ["bundled", "backup"] }
 ring = "0.17"
-quick-xml = "0.41"
+quick-xml = "0.42"
 percent-encoding = "2"
 unicode-normalization = "0.1"
 cookie = "0.18.1"
