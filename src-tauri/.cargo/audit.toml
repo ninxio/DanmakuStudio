@@ -1,0 +1,12 @@
+# cargo-audit configuration, used by the "cargo audit" job in .github/workflows/security.yml.
+# Every exception must say why it does not apply and be revisited when the dependency changes.
+# See docs/THREAT_MODEL.md, "Dependency and supply-chain risk".
+
+[advisories]
+ignore = [
+  # RUSTSEC-2023-0071 (rsa, "Marvin" timing side channel). No fixed release exists.
+  # The attack recovers plaintext by timing *private-key* operations. Studio only uses a
+  # hard-coded Bilibili *public* key for RSA-OAEP encryption during cookie refresh
+  # (src/bilibili/auth/protocol.rs) and never holds or uses an RSA private key.
+  "RUSTSEC-2023-0071",
+]
