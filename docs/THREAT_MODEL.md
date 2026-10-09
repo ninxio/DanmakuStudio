@@ -399,6 +399,7 @@ DPAPI is called without optional entropy and without `CRYPTPROTECT_LOCAL_MACHINE
     - **Rust:** `rsa` RUSTSEC-2023-0071 (Marvin). Studio only does public-key encryption (`src-tauri/src/bilibili/auth/protocol.rs:115-120`), so the attack does not apply.
     - **Rust:** `glib` RUSTSEC-2024-0429 and `proc-macro-error` RUSTSEC-2024-0370. These are Linux-only GTK dependencies and are absent from the Windows graph (`cargo tree --target x86_64-pc-windows-msvc`).
     - **Rust:** five `unic-*` crates marked unmaintained, pulled in by `tauri-utils → urlpattern`.
+    - **Rust:** `chacha20 0.10.1` is yanked, which `cargo audit` reports as a warning. It is locked as a dependency of `rand 0.10`, but `cargo tree --target x86_64-pc-windows-msvc` finds no path to it in the Windows build.
     - **npm:** denial-of-service advisories in dev and build tooling only: `brace-expansion`, `braces`, `postcss-selector-parser`, `source-map-js`.
 - **Existing mitigation (added with this document).**
   - `.github/workflows/security.yml` runs CodeQL, `pnpm audit --prod --audit-level high`, `cargo audit`, OSV-Scanner and a CycloneDX SBOM on every push and PR to `main`, and weekly.
