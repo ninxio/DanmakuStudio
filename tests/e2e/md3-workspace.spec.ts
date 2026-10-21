@@ -188,7 +188,7 @@ test("14 P 密集项目保持双画面双轨首屏，短屏切换不重建绘图
   });
   for (const canvas of canvasNodes)
     expect(await canvas.evaluate((node) => node.isConnected)).toBe(true);
-  expect(await viewers!.evaluate((node) => node.isConnected)).toBe(true);
+  expect(await viewers.evaluate((node) => node.isConnected)).toBe(true);
   await expectNoPageOverflow(page);
 });
 
