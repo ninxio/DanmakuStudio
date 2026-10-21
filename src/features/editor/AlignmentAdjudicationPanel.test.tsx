@@ -222,12 +222,12 @@ describe("独立复核队列离线音频风险", () => {
     const user = userEvent.setup();
     const project = createReviewProject();
     resetProject(project);
-    vi.spyOn(window, "confirm").mockReturnValue(true);
+    const confirm = vi.spyOn(window, "confirm").mockReturnValue(true);
     render(<StoreBackedPanel />);
 
     await user.click(screen.getByRole("button", { name: "导出本机算分包" }));
 
-    expect(window.confirm).toHaveBeenCalledWith(expect.stringContaining("包含完整媒体路径"));
+    expect(confirm).toHaveBeenCalledWith(expect.stringContaining("包含完整媒体路径"));
     expect(browserFileMocks.downloadTextFile).toHaveBeenCalledTimes(2);
     const associationContent = browserFileMocks.downloadTextFile.mock.calls[0][1] as string;
     const [planName, planContent] = browserFileMocks.downloadTextFile.mock.calls[1] as [
@@ -245,12 +245,12 @@ describe("独立复核队列离线音频风险", () => {
     const user = userEvent.setup();
     const project = createReviewProject();
     resetProject(project);
-    vi.spyOn(window, "confirm").mockReturnValue(true);
+    const confirm = vi.spyOn(window, "confirm").mockReturnValue(true);
     render(<StoreBackedPanel />);
 
     await user.click(screen.getByRole("button", { name: "下载当前视觉对照规则" }));
 
-    expect(window.confirm).toHaveBeenCalledWith(expect.stringContaining("完整媒体 SHA-256"));
+    expect(confirm).toHaveBeenCalledWith(expect.stringContaining("完整媒体 SHA-256"));
     await waitFor(() => expect(browserFileMocks.downloadTextFile).toHaveBeenCalledTimes(1));
     const [fileName, content] = browserFileMocks.downloadTextFile.mock.calls[0] as [
       string,
