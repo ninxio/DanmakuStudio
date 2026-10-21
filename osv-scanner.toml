@@ -50,18 +50,18 @@ ignoreUntil = 2027-01-31T00:00:00Z
 reason = "unic-ucd-ident unmaintained (informational). Transitive via tauri-utils -> urlpattern."
 
 # --- npm (pnpm-lock.yaml): development and build tooling only ---
-# None of these packages is a production dependency (`pnpm audit --prod` is clean). They run in
-# lint/test/build tooling on developer-controlled input. Short expiry: Dependabot should land
-# fixes where they exist; braces and postcss-selector-parser 6.x have no fixed release on the
-# major line used by the current toolchain.
+# Neither package is a production dependency (`pnpm audit --prod` is clean). Both come only from
+# Tailwind CSS 3 (chokidar/micromatch -> braces 3.0.3; postcss-nested -> postcss-selector-parser 6.1.x)
+# and run at build time on first-party files. Checked on 2026-10-22: braces 3.0.3 is the last
+# affected and newest release; postcss-selector-parser is fixed only in 7.1.6, outside the 6.x
+# range Tailwind 3 requires. Migrating to Tailwind CSS 4 removes both; review again by the expiry.
 
 [[IgnoredVulns]]
 id = "GHSA-vfj7-8cjw-p6xm"
-ignoreUntil = 2026-11-30T00:00:00Z
-reason = "braces nested-pattern DoS; build tooling only (Tailwind CSS 3 file globbing). No fixed release yet."
+ignoreUntil = 2027-04-30T00:00:00Z
+reason = "braces nested-pattern DoS; build tooling only (Tailwind CSS 3 file globbing). No fixed release: 3.0.3 is the last affected and newest version."
 
 [[IgnoredVulns]]
 id = "GHSA-rj75-hqrm-r3gf"
-ignoreUntil = 2026-11-30T00:00:00Z
-reason = "postcss-selector-parser quadratic parsing; build-time only via Tailwind CSS 3 on first-party CSS. Fix is in 7.x, which Tailwind 3 does not use."
-
+ignoreUntil = 2027-04-30T00:00:00Z
+reason = "postcss-selector-parser quadratic parsing; build-time only via Tailwind CSS 3 on first-party CSS. Fixed only in 7.1.6; Tailwind 3 requires 6.x."
