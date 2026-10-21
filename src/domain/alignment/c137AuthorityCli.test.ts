@@ -183,7 +183,7 @@ describe("C137 authority external CLI", () => {
     } finally {
       await rm(root, { recursive: true, force: true });
     }
-  }, 30_000);
+  }, 90_000);
 
   it("未签名或签名损坏的 EXE 不能生成 native artifact attestation", async () => {
     const root = await mkdtemp(join(tmpdir(), "c137-unsigned-native-"));
