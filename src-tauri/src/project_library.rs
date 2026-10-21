@@ -534,23 +534,31 @@ impl ProjectLibraryRuntime {
                             ProjectLibraryActorMessage::Open(
                                 request,
                                 response,
-                                _snapshot_permit,
+                                snapshot_permit,
                             ) => {
                                 let result = repository
                                     .as_mut()
                                     .map_err(|error| (*error).clone())
                                     .and_then(|repository| repository.open_session(request));
+                                // Release before replying: a caller that sends its next
+                                // snapshot as soon as this reply arrives must not see
+                                // a spurious LibraryBusy.
+                                drop(snapshot_permit);
                                 let _ = response.send(result);
                             }
                             ProjectLibraryActorMessage::Commit(
                                 request,
                                 response,
-                                _snapshot_permit,
+                                snapshot_permit,
                             ) => {
                                 let result = repository
                                     .as_mut()
                                     .map_err(|error| (*error).clone())
                                     .and_then(|repository| repository.commit_session(request));
+                                // Release before replying: a caller that sends its next
+                                // snapshot as soon as this reply arrives must not see
+                                // a spurious LibraryBusy.
+                                drop(snapshot_permit);
                                 let _ = response.send(result);
                             }
                             #[cfg(test)]
