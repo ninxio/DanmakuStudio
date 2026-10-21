@@ -56,21 +56,6 @@ reason = "unic-ucd-ident unmaintained (informational). Transitive via tauri-util
 # major line used by the current toolchain.
 
 [[IgnoredVulns]]
-id = "GHSA-6j4f-fj2g-mc7p"
-ignoreUntil = 2026-11-30T00:00:00Z
-reason = "brace-expansion recursion DoS; dev tooling only (ESLint and typescript-eslint). Fixed release exists; upgrade via Dependabot."
-
-[[IgnoredVulns]]
-id = "GHSA-q2hr-2g5m-vwhr"
-ignoreUntil = 2026-11-30T00:00:00Z
-reason = "brace-expansion quadratic expansion DoS; dev tooling only. Fixed release exists; upgrade via Dependabot."
-
-[[IgnoredVulns]]
-id = "GHSA-qhr7-859c-m2p7"
-ignoreUntil = 2026-11-30T00:00:00Z
-reason = "brace-expansion nested-group recursion DoS; dev tooling only. Fixed release exists; upgrade via Dependabot."
-
-[[IgnoredVulns]]
 id = "GHSA-vfj7-8cjw-p6xm"
 ignoreUntil = 2026-11-30T00:00:00Z
 reason = "braces nested-pattern DoS; build tooling only (Tailwind CSS 3 file globbing). No fixed release yet."
@@ -80,7 +65,3 @@ id = "GHSA-rj75-hqrm-r3gf"
 ignoreUntil = 2026-11-30T00:00:00Z
 reason = "postcss-selector-parser quadratic parsing; build-time only via Tailwind CSS 3 on first-party CSS. Fix is in 7.x, which Tailwind 3 does not use."
 
-[[IgnoredVulns]]
-id = "GHSA-68fv-2mgg-jv7q"
-ignoreUntil = 2026-11-30T00:00:00Z
-reason = "source-map-js indexed source-map DoS; build-time only (Vite/PostCSS) on first-party source maps. Fixed release exists; upgrade via Dependabot."
